@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		047286411C57F28300F08547 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047286401C57F28300F08547 /* AppDelegate.swift */; };
+		047286431C57F28300F08547 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047286421C57F28300F08547 /* ViewController.swift */; };
+		047286461C57F28300F08547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047286441C57F28300F08547 /* Main.storyboard */; };
+		047286481C57F28300F08547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047286471C57F28300F08547 /* Assets.xcassets */; };
+		0472864B1C57F28300F08547 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047286491C57F28300F08547 /* LaunchScreen.storyboard */; };
+		047286531C57F55700F08547 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047286521C57F55700F08547 /* AVFoundation.framework */; };
+		047286561C57F8DE00F08547 /* bruh-dude!.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 047286541C57F8DE00F08547 /* bruh-dude!.jpg */; };
+		047286571C57F8DE00F08547 /* bruh-sound-effect.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0472863D1C57F28300F08547 /* Bruhhh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bruhhh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		047286401C57F28300F08547 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		047286421C57F28300F08547 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		047286451C57F28300F08547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		047286471C57F28300F08547 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0472864A1C57F28300F08547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0472864C1C57F28300F08547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047286521C57F55700F08547 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		047286541C57F8DE00F08547 /* bruh-dude!.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bruh-dude!.jpg"; sourceTree = "<group>"; };
+		047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bruh-sound-effect.m4a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0472863A1C57F28300F08547 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047286531C57F55700F08547 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		047286341C57F28300F08547 = {
+			isa = PBXGroup;
+			children = (
+				047286521C57F55700F08547 /* AVFoundation.framework */,
+				0472863F1C57F28300F08547 /* Bruhhh */,
+				0472863E1C57F28300F08547 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0472863E1C57F28300F08547 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0472863D1C57F28300F08547 /* Bruhhh.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0472863F1C57F28300F08547 /* Bruhhh */ = {
+			isa = PBXGroup;
+			children = (
+				047286581C57F8EB00F08547 /* Helpers */,
+				047286401C57F28300F08547 /* AppDelegate.swift */,
+				047286421C57F28300F08547 /* ViewController.swift */,
+				047286441C57F28300F08547 /* Main.storyboard */,
+				047286471C57F28300F08547 /* Assets.xcassets */,
+				047286491C57F28300F08547 /* LaunchScreen.storyboard */,
+				0472864C1C57F28300F08547 /* Info.plist */,
+			);
+			path = Bruhhh;
+			sourceTree = "<group>";
+		};
+		047286581C57F8EB00F08547 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				047286541C57F8DE00F08547 /* bruh-dude!.jpg */,
+				047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0472863C1C57F28300F08547 /* Bruhhh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0472864F1C57F28300F08547 /* Build configuration list for PBXNativeTarget "Bruhhh" */;
+			buildPhases = (
+				047286391C57F28300F08547 /* Sources */,
+				0472863A1C57F28300F08547 /* Frameworks */,
+				0472863B1C57F28300F08547 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bruhhh;
+			productName = Bruhhh;
+			productReference = 0472863D1C57F28300F08547 /* Bruhhh.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		047286351C57F28300F08547 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Mac Demo";
+				TargetAttributes = {
+					0472863C1C57F28300F08547 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3K93EXS2KS;
+					};
+				};
+			};
+			buildConfigurationList = 047286381C57F28300F08547 /* Build configuration list for PBXProject "Bruhhh" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 047286341C57F28300F08547;
+			productRefGroup = 0472863E1C57F28300F08547 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0472863C1C57F28300F08547 /* Bruhhh */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0472863B1C57F28300F08547 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047286571C57F8DE00F08547 /* bruh-sound-effect.m4a in Resources */,
+				0472864B1C57F28300F08547 /* LaunchScreen.storyboard in Resources */,
+				047286481C57F28300F08547 /* Assets.xcassets in Resources */,
+				047286561C57F8DE00F08547 /* bruh-dude!.jpg in Resources */,
+				047286461C57F28300F08547 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		047286391C57F28300F08547 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047286431C57F28300F08547 /* ViewController.swift in Sources */,
+				047286411C57F28300F08547 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		047286441C57F28300F08547 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				047286451C57F28300F08547 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		047286491C57F28300F08547 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0472864A1C57F28300F08547 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0472864D1C57F28300F08547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0472864E1C57F28300F08547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		047286501C57F28300F08547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Bruhhh/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MacSuperstore.Bruhhh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		047286511C57F28300F08547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Bruhhh/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MacSuperstore.Bruhhh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		047286381C57F28300F08547 /* Build configuration list for PBXProject "Bruhhh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0472864D1C57F28300F08547 /* Debug */,
+				0472864E1C57F28300F08547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0472864F1C57F28300F08547 /* Build configuration list for PBXNativeTarget "Bruhhh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047286501C57F28300F08547 /* Debug */,
+				047286511C57F28300F08547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 047286351C57F28300F08547 /* Project object */;
+}
