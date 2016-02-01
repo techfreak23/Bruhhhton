@@ -12,10 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var buttonOptions: NSMutableArray?
+    var buttonShortcuts: NSMutableArray?
+    var userDefaults: NSMutableDictionary?
+    let descriptionKey = "descriptionKey"
+    let titleKey = "titleKey"
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //createButtonOptions()
+        
+        //NSUserDefaults.standardUserDefaults().registerDefaults(<#T##registrationDictionary: [String : AnyObject]##[String : AnyObject]#>)
+        
+        
         return true
     }
 
@@ -40,6 +51,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func createButtonOptions() {
+        let archerFail = [titleKey: "Archer Fail", descriptionKey: "archer-fail"]
+        let cutHim = [titleKey: "Girl, I Cut Him", descriptionKey: "bon-qui-girl-i-cut-him"]
+        let rude = [titleKey: "Rude", descriptionKey: "bon-qui-rude"]
+        let security = [titleKey: "Security", descriptionKey: "bon-qui-security"]
+        let bruh = [titleKey: "Bruh", descriptionKey: "bruh-sound-effect"]
+        let byeFelicia = [titleKey: "Bye Felicia", descriptionKey: "bye-felicia"]
+        let hummina = [titleKey: "Hummina", descriptionKey: "dave-chappelle-hummina"]
+        let deezNuts = [titleKey: "Deez Nuts", descriptionKey: "deez-nuts"]
+        let gotHim = [titleKey: "Got Em", descriptionKey: "got-him"]
+        let gotchaBitch = [titleKey: "Gotcha Bitch", descriptionKey: "gotcha-bitch"]
+        let hahGay = [titleKey: "Ha Gay", descriptionKey: "hah-gay"]
+        let shazam = [titleKey: "Shazam", descriptionKey: "shazam"]
+        let thatsEasy = [titleKey: "That Was Easy", descriptionKey: "that-was-easy"]
+        let sheSaid = [titleKey: "That's What She Said", descriptionKey: "thats-what-she-said"]
+        let wrapItUp = [titleKey: "Wrap It Up", descriptionKey: "wrap-it-up-music"]
+        
+        buttonOptions?.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, shazam, thatsEasy, sheSaid, wrapItUp])
+        
+        
+    
+    }
+    
+    func createShortcutItems() {
+        
+    }
+    
+    
 
 
 }

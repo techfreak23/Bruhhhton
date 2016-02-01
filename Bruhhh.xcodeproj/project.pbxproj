@@ -17,8 +17,12 @@
 		047286481C57F28300F08547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047286471C57F28300F08547 /* Assets.xcassets */; };
 		0472864B1C57F28300F08547 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047286491C57F28300F08547 /* LaunchScreen.storyboard */; };
 		047286531C57F55700F08547 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047286521C57F55700F08547 /* AVFoundation.framework */; };
-		047286561C57F8DE00F08547 /* bruh-dude!.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 047286541C57F8DE00F08547 /* bruh-dude!.jpg */; };
+		047286561C57F8DE00F08547 /* bruh-sound-effect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 047286541C57F8DE00F08547 /* bruh-sound-effect.jpg */; };
 		047286571C57F8DE00F08547 /* bruh-sound-effect.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */; };
+		04B9964C1C5D9B10003CFAAC /* ButtonSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9964B1C5D9B10003CFAAC /* ButtonSelectionViewController.swift */; };
+		04B996501C5D9E1D003CFAAC /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B9964D1C5D9E1D003CFAAC /* menu-icon.png */; };
+		04B996511C5D9E1D003CFAAC /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B9964E1C5D9E1D003CFAAC /* menu-icon@2x.png */; };
+		04B996521C5D9E1D003CFAAC /* menu-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B9964F1C5D9E1D003CFAAC /* menu-icon@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,7 @@
 		04227ACB1C5D534900D075C2 /* System-settings-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "System-settings-icon@2x.png"; sourceTree = "<group>"; };
 		04227ACC1C5D534900D075C2 /* System-settings-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "System-settings-icon@3x.png"; sourceTree = "<group>"; };
 		04227AD01C5D558C00D075C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		04227AD41C5D7C3300D075C2 /* stringConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stringConstants.h; sourceTree = "<group>"; };
 		0472863D1C57F28300F08547 /* Bruhhh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bruhhh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047286401C57F28300F08547 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047286421C57F28300F08547 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,8 +39,12 @@
 		0472864A1C57F28300F08547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0472864C1C57F28300F08547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047286521C57F55700F08547 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		047286541C57F8DE00F08547 /* bruh-dude!.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bruh-dude!.jpg"; sourceTree = "<group>"; };
+		047286541C57F8DE00F08547 /* bruh-sound-effect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bruh-sound-effect.jpg"; sourceTree = "<group>"; };
 		047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bruh-sound-effect.m4a"; sourceTree = "<group>"; };
+		04B9964B1C5D9B10003CFAAC /* ButtonSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSelectionViewController.swift; sourceTree = "<group>"; };
+		04B9964D1C5D9E1D003CFAAC /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
+		04B9964E1C5D9E1D003CFAAC /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
+		04B9964F1C5D9E1D003CFAAC /* menu-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +83,8 @@
 				047286401C57F28300F08547 /* AppDelegate.swift */,
 				047286421C57F28300F08547 /* ViewController.swift */,
 				04227AD01C5D558C00D075C2 /* SettingsViewController.swift */,
+				04B9964B1C5D9B10003CFAAC /* ButtonSelectionViewController.swift */,
+				04227AD41C5D7C3300D075C2 /* stringConstants.h */,
 				047286441C57F28300F08547 /* Main.storyboard */,
 				047286471C57F28300F08547 /* Assets.xcassets */,
 				047286491C57F28300F08547 /* LaunchScreen.storyboard */,
@@ -85,10 +96,13 @@
 		047286581C57F8EB00F08547 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				04B9964D1C5D9E1D003CFAAC /* menu-icon.png */,
+				04B9964E1C5D9E1D003CFAAC /* menu-icon@2x.png */,
+				04B9964F1C5D9E1D003CFAAC /* menu-icon@3x.png */,
 				04227ACA1C5D534900D075C2 /* System-settings-icon.png */,
 				04227ACB1C5D534900D075C2 /* System-settings-icon@2x.png */,
 				04227ACC1C5D534900D075C2 /* System-settings-icon@3x.png */,
-				047286541C57F8DE00F08547 /* bruh-dude!.jpg */,
+				047286541C57F8DE00F08547 /* bruh-sound-effect.jpg */,
 				047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */,
 			);
 			name = Helpers;
@@ -154,11 +168,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				047286571C57F8DE00F08547 /* bruh-sound-effect.m4a in Resources */,
+				04B996521C5D9E1D003CFAAC /* menu-icon@3x.png in Resources */,
 				0472864B1C57F28300F08547 /* LaunchScreen.storyboard in Resources */,
+				04B996511C5D9E1D003CFAAC /* menu-icon@2x.png in Resources */,
 				04227ACF1C5D534900D075C2 /* System-settings-icon@3x.png in Resources */,
 				04227ACE1C5D534900D075C2 /* System-settings-icon@2x.png in Resources */,
+				04B996501C5D9E1D003CFAAC /* menu-icon.png in Resources */,
 				047286481C57F28300F08547 /* Assets.xcassets in Resources */,
-				047286561C57F8DE00F08547 /* bruh-dude!.jpg in Resources */,
+				047286561C57F8DE00F08547 /* bruh-sound-effect.jpg in Resources */,
 				04227ACD1C5D534900D075C2 /* System-settings-icon.png in Resources */,
 				047286461C57F28300F08547 /* Main.storyboard in Resources */,
 			);
@@ -174,6 +191,7 @@
 				047286431C57F28300F08547 /* ViewController.swift in Sources */,
 				047286411C57F28300F08547 /* AppDelegate.swift in Sources */,
 				04227AD11C5D558C00D075C2 /* SettingsViewController.swift in Sources */,
+				04B9964C1C5D9B10003CFAAC /* ButtonSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +309,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MacSuperstore.Bruhhh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -305,6 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MacSuperstore.Bruhhh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

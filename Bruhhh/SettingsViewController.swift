@@ -18,6 +18,7 @@ class SettingsViewController: UITableViewController {
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
 
         self.tableView.backgroundColor = UIColor.init(red: 56/255, green: 3/255, blue: 98/255, alpha: 1.0)
+        self.title = "Settings"
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,11 +40,15 @@ class SettingsViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        
+        //cell = UITableViewCell(style: .Value1, reuseIdentifier: "reuseIdentifier")
         
         cell.backgroundColor = UIColor.clearColor()
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = menuOptions[indexPath.row]
+        cell.detailTextLabel?.textColor = UIColor.lightGrayColor()
+        cell.detailTextLabel?.text = "Option"
         
         return cell
     }

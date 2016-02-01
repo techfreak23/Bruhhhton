@@ -28,9 +28,14 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = titleDict
         
         let buttonImage = UIImage(named: "System-settings-icon")
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: buttonImage, style: .Plain, target: self, action: "showSettings")
+        let menuButtonImage = UIImage(named: "menu-icon")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: buttonImage, style: .Plain, target: self, action: "showSettings")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: menuButtonImage, style: .Plain, target: self, action: "showButtons")
         
-        bruhButton.layer.cornerRadius = 7.0
+        bruhButton.layer.cornerRadius = 100.0
+        bruhButton.layer.borderColor = UIColor.grayColor().CGColor
+        bruhButton.layer.borderWidth = 3.0
+        bruhButton.clipsToBounds = true
         //loopPlayer
         
     }
@@ -45,7 +50,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func playBruh(sender: AnyObject) {
-        
         loopPlayer.currentTime = 0
         loopPlayer.play()
         
@@ -69,6 +73,15 @@ class ViewController: UIViewController {
         
         let settingsVC = SettingsViewController()
         self.navigationController?.pushViewController(settingsVC, animated: true)
+    }
+    
+    func showButtons() {
+        print("Show button selection")
+        
+        let 👍🏼 = ButtonSelectionViewController()
+        👍🏼.titleString = "Choose a button"
+        let 💩 = UINavigationController(rootViewController: 👍🏼)
+        self.navigationController?.presentViewController(💩, animated: true, completion: nil)
     }
 
 }
