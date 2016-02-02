@@ -22,9 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        //createButtonOptions()
         
-        //NSUserDefaults.standardUserDefaults().registerDefaults(<#T##registrationDictionary: [String : AnyObject]##[String : AnyObject]#>)
         
         
         return true
@@ -52,7 +50,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func createButtonOptions() {
+    func registerDefaults() {
+        
+        
+        
         let archerFail = [titleKey: "Archer Fail", descriptionKey: "archer-fail"]
         let cutHim = [titleKey: "Girl, I Cut Him", descriptionKey: "bon-qui-girl-i-cut-him"]
         let rude = [titleKey: "Rude", descriptionKey: "bon-qui-rude"]
@@ -74,11 +75,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     
     }
-    
-    func createShortcutItems() {
-        
-    }
-    
     
 
 

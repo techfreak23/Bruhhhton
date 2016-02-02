@@ -12,7 +12,7 @@ class ButtonSelectionViewController: UITableViewController {
     
     //let menuOptions = ["Default button", "Button shortcuts", "When relaunching, use..."]
     
-    var buttonOptions: NSMutableArray?
+    var buttonOptions = NSMutableArray()
     let descriptionKey = "descriptionKey"
     let titleKey = "titleKey"
     var titleString = ""
@@ -53,20 +53,19 @@ class ButtonSelectionViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if buttonOptions == nil {
-            return 0
-        }
-        
-        return (buttonOptions?.count)!
+        return buttonOptions.count
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
         
-        let titleText = buttonOptions![indexPath.row].objectForKey(titleKey) as! String
+        let titleText = buttonOptions.objectAtIndex(indexPath.row).objectForKey(titleKey) as! String
         
+        cell.backgroundColor = UIColor.clearColor()
+        cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = titleText
+        cell.accessoryType = .Checkmark
         
         return cell
     }
@@ -94,7 +93,7 @@ class ButtonSelectionViewController: UITableViewController {
         let sheSaid = [titleKey: "That's What She Said", descriptionKey: "thats-what-she-said"]
         let wrapItUp = [titleKey: "Wrap It Up", descriptionKey: "wrap-it-up-music"]
         
-        buttonOptions?.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, shazam, thatsEasy, sheSaid, wrapItUp])
+        buttonOptions.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, shazam, thatsEasy, sheSaid, wrapItUp])
         
         self.tableView.reloadData()
         

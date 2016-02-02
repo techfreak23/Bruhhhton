@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LastUsedButton</key>
+	<dict>
+		<key>titleKey</key>
+		<string>Bruh</string>
+		<key>descriptionKey</key>
+		<string>bruh-sound-effect</string>
+	</dict>
+	<key>ShortCutButtons</key>
+	<array>
+		<dict>
+			<key>titleKey</key>
+			<string>Bruh</string>
+			<key>descriptionKey</key>
+			<string>bruh-sound-effect</string>
+		</dict>
+		<dict>
+			<key>titleKey</key>
+			<string>Bye Felicia</string>
+			<key>descriptionKey</key>
+			<string>bye-felicia</string>
+		</dict>
+		<dict>
+			<key>titleKey</key>
+			<string>Got em</string>
+			<key>descriptionKey</key>
+			<string>got-him</string>
+		</dict>
+	</array>
+	<key>UseDefault</key>
+	<true/>
+	<key>DefaultButton</key>
+	<dict>
+		<key>titleKey</key>
+		<string>Bruh</string>
+		<key>descriptionKey</key>
+		<string>bruh-sound-effect</string>
+	</dict>
+</dict>
+</plist>

@@ -24,9 +24,7 @@
                                     <constraint firstAttribute="height" constant="200" id="2d8-i9-IVh"/>
                                     <constraint firstAttribute="width" constant="200" id="IxT-Ys-bqr"/>
                                 </constraints>
-                                <state key="normal" title="BRUHHH">
-                                    <color key="titleColor" red="0.37918675070000002" green="0.14933948750000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="Press me"/>
                                 <state key="highlighted" image="bruh-sound-effect.jpg" backgroundImage="bruh-sound-effect.jpg">
                                     <color key="titleColor" red="0.21947655160000001" green="0.01029786815" blue="0.38523910979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
