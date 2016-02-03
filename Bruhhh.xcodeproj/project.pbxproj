@@ -75,6 +75,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043EF5211C61A15500733477 /* Sound bites */ = {
+			isa = PBXGroup;
+			children = (
+				3F0B7B3F1C6194130086F47B /* archer-fail.m4a */,
+				3F0B7B401C6194130086F47B /* bon-qui-girl-i-cut-him.m4a */,
+				3F0B7B411C6194130086F47B /* bon-qui-rude.m4a */,
+				3F0B7B421C6194130086F47B /* bon-qui-security.m4a */,
+				3F0B7B431C6194130086F47B /* bye-felicia.m4a */,
+				3F0B7B441C6194130086F47B /* dave-chappelle-hummina.m4a */,
+				3F0B7B451C6194130086F47B /* deez-nuts.m4a */,
+				3F0B7B461C6194130086F47B /* got-him.m4a */,
+				3F0B7B471C6194130086F47B /* gotcha-bitch.m4a */,
+				3F0B7B481C6194130086F47B /* hah-gay.m4a */,
+				3F0B7B491C6194130086F47B /* shazam.m4a */,
+				3F0B7B4A1C6194130086F47B /* that-was-easy.m4a */,
+				3F0B7B4B1C6194130086F47B /* thats-what-she-said.m4a */,
+				3F0B7B4C1C6194130086F47B /* wrap-it-up-music.m4a */,
+				047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */,
+			);
+			name = "Sound bites";
+			sourceTree = "<group>";
+		};
+		043EF5221C61A16100733477 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				04B9964D1C5D9E1D003CFAAC /* menu-icon.png */,
+				04B9964E1C5D9E1D003CFAAC /* menu-icon@2x.png */,
+				04B9964F1C5D9E1D003CFAAC /* menu-icon@3x.png */,
+				04227ACA1C5D534900D075C2 /* System-settings-icon.png */,
+				04227ACB1C5D534900D075C2 /* System-settings-icon@2x.png */,
+				04227ACC1C5D534900D075C2 /* System-settings-icon@3x.png */,
+				047286541C57F8DE00F08547 /* bruh-sound-effect.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		047286341C57F28300F08547 = {
 			isa = PBXGroup;
 			children = (
@@ -113,28 +149,8 @@
 		047286581C57F8EB00F08547 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3F0B7B3F1C6194130086F47B /* archer-fail.m4a */,
-				3F0B7B401C6194130086F47B /* bon-qui-girl-i-cut-him.m4a */,
-				3F0B7B411C6194130086F47B /* bon-qui-rude.m4a */,
-				3F0B7B421C6194130086F47B /* bon-qui-security.m4a */,
-				3F0B7B431C6194130086F47B /* bye-felicia.m4a */,
-				3F0B7B441C6194130086F47B /* dave-chappelle-hummina.m4a */,
-				3F0B7B451C6194130086F47B /* deez-nuts.m4a */,
-				3F0B7B461C6194130086F47B /* got-him.m4a */,
-				3F0B7B471C6194130086F47B /* gotcha-bitch.m4a */,
-				3F0B7B481C6194130086F47B /* hah-gay.m4a */,
-				3F0B7B491C6194130086F47B /* shazam.m4a */,
-				3F0B7B4A1C6194130086F47B /* that-was-easy.m4a */,
-				3F0B7B4B1C6194130086F47B /* thats-what-she-said.m4a */,
-				3F0B7B4C1C6194130086F47B /* wrap-it-up-music.m4a */,
-				04B9964D1C5D9E1D003CFAAC /* menu-icon.png */,
-				04B9964E1C5D9E1D003CFAAC /* menu-icon@2x.png */,
-				04B9964F1C5D9E1D003CFAAC /* menu-icon@3x.png */,
-				04227ACA1C5D534900D075C2 /* System-settings-icon.png */,
-				04227ACB1C5D534900D075C2 /* System-settings-icon@2x.png */,
-				04227ACC1C5D534900D075C2 /* System-settings-icon@3x.png */,
-				047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */,
-				047286541C57F8DE00F08547 /* bruh-sound-effect.jpg */,
+				043EF5211C61A15500733477 /* Sound bites */,
+				043EF5221C61A16100733477 /* images */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";

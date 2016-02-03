@@ -45,12 +45,12 @@ class ViewController: UIViewController {
         bruhButton.layer.borderColor = UIColor.grayColor().CGColor
         bruhButton.layer.borderWidth = 3.0
         bruhButton.clipsToBounds = true
-        createLoopPlayer()
+        //createLoopPlayer()
     }
     
     override func viewWillAppear(animated: Bool) {
         print("View is appearing...")
-        //createLoopPlayer()
+        createLoopPlayer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,9 +74,19 @@ class ViewController: UIViewController {
         
         print(resourceName)
         
-        let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: ".m4a")
-        print("File path: \(path)")
-        let url = NSURL(fileURLWithPath: path!)
+        var url = NSURL()
+        
+        if let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: ".m4a") {
+            url = NSURL(fileURLWithPath: path)
+        } else {
+            let alert = UIAlertController(title: "Oops", message: "Looks like something didn't load quite right :(", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Okay :(", style: .Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        
+        //let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: ".m4a")
+        //print("File path: \(path)")
+        //let url = NSURL(fileURLWithPath: path!)
         
         do {
             loopPlayer = try AVAudioPlayer(contentsOfURL: url)
@@ -84,19 +94,18 @@ class ViewController: UIViewController {
             loopPlayer.numberOfLoops = 0
         } catch {
             print("The sound could not be initialized")
+            let alert = UIAlertController(title: "Oops", message: "Looks like the clip could not load :(", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Okay :(", style: .Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
     func showSettings() {
-        print("Showing settings")
-        
         let settingsVC = SettingsViewController()
         self.navigationController?.pushViewController(settingsVC, animated: true)
     }
     
     func showButtons() {
-        print("Show button selection")
-        
         let buttonSelection = ButtonSelectionViewController()
         buttonSelection.titleString = "Choose a button"
         buttonSelection.source = "fromHome"
@@ -111,10 +120,9 @@ class ViewController: UIViewController {
 
 extension ViewController: ButtonSelectionDelegate {
     func didSelectButton(sender: [String : AnyObject]) {
-        print("Selected button from selection: \(sender)")
+        loopPlayer.stop()
         currentButton = sender
         print("Current after selection: \(currentButton)")
-        createLoopPlayer()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
