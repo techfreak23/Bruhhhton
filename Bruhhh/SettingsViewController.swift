@@ -16,8 +16,10 @@ class SettingsViewController: UITableViewController {
         super.viewDidLoad()
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
-
         self.tableView.backgroundColor = UIColor.init(red: 56/255, green: 3/255, blue: 98/255, alpha: 1.0)
+        self.tableView.separatorStyle = .None
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
         self.title = "Settings"
     }
 
@@ -53,7 +55,14 @@ class SettingsViewController: UITableViewController {
         return cell
     }
     
-    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 0 {
+            let buttonSelection = ButtonSelectionViewController()
+            buttonSelection.titleString = "Choose a default button"
+            self.navigationController?.pushViewController(buttonSelection, animated: true)
+            
+        }
+    }
     
 
     /*

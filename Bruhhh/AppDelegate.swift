@@ -22,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        
-        
+        registerDefaults()
         
         return true
     }
@@ -52,8 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func registerDefaults() {
         
+        let filePath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("DefaultSettings", ofType: ".plist")!)
+        let defaultSettings = NSDictionary(contentsOfURL: filePath) as! [String: AnyObject]
+        NSUserDefaults.standardUserDefaults().registerDefaults(defaultSettings)
         
-        
+        /*
         let archerFail = [titleKey: "Archer Fail", descriptionKey: "archer-fail"]
         let cutHim = [titleKey: "Girl, I Cut Him", descriptionKey: "bon-qui-girl-i-cut-him"]
         let rude = [titleKey: "Rude", descriptionKey: "bon-qui-rude"]
@@ -72,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         buttonOptions?.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, shazam, thatsEasy, sheSaid, wrapItUp])
         
-        
+        */
     
     }
     

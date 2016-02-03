@@ -47,6 +47,20 @@
 		04B9964D1C5D9E1D003CFAAC /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		04B9964E1C5D9E1D003CFAAC /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
 		04B9964F1C5D9E1D003CFAAC /* menu-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@3x.png"; sourceTree = "<group>"; };
+		3F0B7B3F1C6194130086F47B /* archer-fail.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "archer-fail.m4a"; sourceTree = "<group>"; };
+		3F0B7B401C6194130086F47B /* bon-qui-girl-i-cut-him.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bon-qui-girl-i-cut-him.m4a"; sourceTree = "<group>"; };
+		3F0B7B411C6194130086F47B /* bon-qui-rude.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bon-qui-rude.m4a"; sourceTree = "<group>"; };
+		3F0B7B421C6194130086F47B /* bon-qui-security.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bon-qui-security.m4a"; sourceTree = "<group>"; };
+		3F0B7B431C6194130086F47B /* bye-felicia.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bye-felicia.m4a"; sourceTree = "<group>"; };
+		3F0B7B441C6194130086F47B /* dave-chappelle-hummina.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dave-chappelle-hummina.m4a"; sourceTree = "<group>"; };
+		3F0B7B451C6194130086F47B /* deez-nuts.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "deez-nuts.m4a"; sourceTree = "<group>"; };
+		3F0B7B461C6194130086F47B /* got-him.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "got-him.m4a"; sourceTree = "<group>"; };
+		3F0B7B471C6194130086F47B /* gotcha-bitch.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gotcha-bitch.m4a"; sourceTree = "<group>"; };
+		3F0B7B481C6194130086F47B /* hah-gay.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hah-gay.m4a"; sourceTree = "<group>"; };
+		3F0B7B491C6194130086F47B /* shazam.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = shazam.m4a; sourceTree = "<group>"; };
+		3F0B7B4A1C6194130086F47B /* that-was-easy.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "that-was-easy.m4a"; sourceTree = "<group>"; };
+		3F0B7B4B1C6194130086F47B /* thats-what-she-said.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "thats-what-she-said.m4a"; sourceTree = "<group>"; };
+		3F0B7B4C1C6194130086F47B /* wrap-it-up-music.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wrap-it-up-music.m4a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,14 +113,28 @@
 		047286581C57F8EB00F08547 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3F0B7B3F1C6194130086F47B /* archer-fail.m4a */,
+				3F0B7B401C6194130086F47B /* bon-qui-girl-i-cut-him.m4a */,
+				3F0B7B411C6194130086F47B /* bon-qui-rude.m4a */,
+				3F0B7B421C6194130086F47B /* bon-qui-security.m4a */,
+				3F0B7B431C6194130086F47B /* bye-felicia.m4a */,
+				3F0B7B441C6194130086F47B /* dave-chappelle-hummina.m4a */,
+				3F0B7B451C6194130086F47B /* deez-nuts.m4a */,
+				3F0B7B461C6194130086F47B /* got-him.m4a */,
+				3F0B7B471C6194130086F47B /* gotcha-bitch.m4a */,
+				3F0B7B481C6194130086F47B /* hah-gay.m4a */,
+				3F0B7B491C6194130086F47B /* shazam.m4a */,
+				3F0B7B4A1C6194130086F47B /* that-was-easy.m4a */,
+				3F0B7B4B1C6194130086F47B /* thats-what-she-said.m4a */,
+				3F0B7B4C1C6194130086F47B /* wrap-it-up-music.m4a */,
 				04B9964D1C5D9E1D003CFAAC /* menu-icon.png */,
 				04B9964E1C5D9E1D003CFAAC /* menu-icon@2x.png */,
 				04B9964F1C5D9E1D003CFAAC /* menu-icon@3x.png */,
 				04227ACA1C5D534900D075C2 /* System-settings-icon.png */,
 				04227ACB1C5D534900D075C2 /* System-settings-icon@2x.png */,
 				04227ACC1C5D534900D075C2 /* System-settings-icon@3x.png */,
-				047286541C57F8DE00F08547 /* bruh-sound-effect.jpg */,
 				047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */,
+				047286541C57F8DE00F08547 /* bruh-sound-effect.jpg */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";

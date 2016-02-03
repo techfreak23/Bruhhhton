@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol ButtonSelectionDelegate: class {
+    func didSelectButton(sender: [String: AnyObject])
+    func didCancel()
+}
+
 class ButtonSelectionViewController: UITableViewController {
     
     //let menuOptions = ["Default button", "Button shortcuts", "When relaunching, use..."]
@@ -16,12 +21,16 @@ class ButtonSelectionViewController: UITableViewController {
     let descriptionKey = "descriptionKey"
     let titleKey = "titleKey"
     var titleString = ""
-    var type = ""
+    var source = ""
+    var lastUsed: AnyObject?
+    weak var delegate:ButtonSelectionDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         createButtonOptions()
+        
+        self.title = titleString
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -31,24 +40,25 @@ class ButtonSelectionViewController: UITableViewController {
         let titleDict = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancelSelection")
+        if source == "fromHome" {
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancelSelection")
+        }
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
-        
         self.tableView.backgroundColor = UIColor.init(red: 56/255, green: 3/255, blue: 98/255, alpha: 1.0)
+        self.tableView.separatorStyle = .None
         
-        self.title = titleString
+        lastUsed = NSUserDefaults.standardUserDefaults().dictionaryForKey("LastButtonUsed")
+        print("Last button used: \(lastUsed!)")
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
@@ -65,15 +75,16 @@ class ButtonSelectionViewController: UITableViewController {
         cell.backgroundColor = UIColor.clearColor()
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = titleText
-        cell.accessoryType = .Checkmark
         
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.delegate?.didSelectButton(buttonOptions.objectAtIndex(indexPath.row) as! [String : AnyObject])
+    }
+    
     func cancelSelection() {
-        print("Cancelling selection")
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.delegate?.didCancel()
     }
     
     func createButtonOptions() {
@@ -98,50 +109,5 @@ class ButtonSelectionViewController: UITableViewController {
         self.tableView.reloadData()
         
     }
-    
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the specified item to be editable.
-    return true
-    }
-    */
-    
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-    if editingStyle == .Delete {
-    // Delete the row from the data source
-    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-    } else if editingStyle == .Insert {
-    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }
-    }
-    */
-    
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-    
-    }
-    */
-    
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    // Return false if you do not want the item to be re-orderable.
-    return true
-    }
-    */
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

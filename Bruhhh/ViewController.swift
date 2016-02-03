@@ -14,10 +14,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var bruhButton: UIButton!
     
     var loopPlayer: AVAudioPlayer!
+    var currentButton = [String: AnyObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if NSUserDefaults.standardUserDefaults().boolForKey("UseDefault") {
+            currentButton = NSUserDefaults.standardUserDefaults().dictionaryForKey("DefaultButton")!
+            print("Current button: \(currentButton)")
+        } else {
+            currentButton = NSUserDefaults.standardUserDefaults().dictionaryForKey("LastUsedButton")!
+            print("Last used button: \(currentButton)")
+        }
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -36,12 +45,12 @@ class ViewController: UIViewController {
         bruhButton.layer.borderColor = UIColor.grayColor().CGColor
         bruhButton.layer.borderWidth = 3.0
         bruhButton.clipsToBounds = true
-        //loopPlayer
-        
+        createLoopPlayer()
     }
     
     override func viewWillAppear(animated: Bool) {
-        createLoopPlayer()
+        print("View is appearing...")
+        //createLoopPlayer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,7 +65,17 @@ class ViewController: UIViewController {
     }
     
     func createLoopPlayer() {
-        let path = NSBundle.mainBundle().pathForResource("bruh-sound-effect", ofType: ".m4a")
+        
+        //let buttonResource = NSUserDefaults.standardUserDefaults().dictionaryForKey("DefaultButton")!
+        //print("Default button: \(buttonResource)")
+        
+        self.title = (currentButton["titleKey"] as! String)
+        let resourceName = currentButton["descriptionKey"] as! String
+        
+        print(resourceName)
+        
+        let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: ".m4a")
+        print("File path: \(path)")
         let url = NSURL(fileURLWithPath: path!)
         
         do {
@@ -78,11 +97,30 @@ class ViewController: UIViewController {
     func showButtons() {
         print("Show button selection")
         
-        let 👍🏼 = ButtonSelectionViewController()
-        👍🏼.titleString = "Choose a button"
-        let 💩 = UINavigationController(rootViewController: 👍🏼)
-        self.navigationController?.presentViewController(💩, animated: true, completion: nil)
+        let buttonSelection = ButtonSelectionViewController()
+        buttonSelection.titleString = "Choose a button"
+        buttonSelection.source = "fromHome"
+        buttonSelection.delegate = self
+        let nav = UINavigationController(rootViewController: buttonSelection)
+        self.navigationController?.presentViewController(nav, animated: true, completion: nil)
     }
 
+}
+
+// MARK: - Button selection delegate methods
+
+extension ViewController: ButtonSelectionDelegate {
+    func didSelectButton(sender: [String : AnyObject]) {
+        print("Selected button from selection: \(sender)")
+        currentButton = sender
+        print("Current after selection: \(currentButton)")
+        createLoopPlayer()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func didCancel() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
 
