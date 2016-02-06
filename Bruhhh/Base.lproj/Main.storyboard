@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="width" constant="200" id="IxT-Ys-bqr"/>
                                 </constraints>
                                 <state key="normal" title="Press me"/>
-                                <state key="highlighted" image="bruh-sound-effect.jpg" backgroundImage="bruh-sound-effect.jpg">
+                                <state key="highlighted">
                                     <color key="titleColor" red="0.21947655160000001" green="0.01029786815" blue="0.38523910979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -148,7 +148,4 @@
             <point key="canvasLocation" x="577" y="436"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="bruh-sound-effect.jpg" width="512" height="512"/>
-    </resources>
 </document>

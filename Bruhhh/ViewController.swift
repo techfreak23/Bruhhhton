@@ -18,13 +18,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         if NSUserDefaults.standardUserDefaults().boolForKey("UseDefault") {
             currentButton = NSUserDefaults.standardUserDefaults().dictionaryForKey("DefaultButton")!
+            NSUserDefaults.standardUserDefaults().setObject(currentButton, forKey: "LastButtonUsed")
             print("Current button: \(currentButton)")
         } else {
-            currentButton = NSUserDefaults.standardUserDefaults().dictionaryForKey("LastUsedButton")!
+            currentButton = NSUserDefaults.standardUserDefaults().dictionaryForKey("LastButtonUsed")!
             print("Last used button: \(currentButton)")
         }
         
@@ -45,7 +45,6 @@ class ViewController: UIViewController {
         bruhButton.layer.borderColor = UIColor.grayColor().CGColor
         bruhButton.layer.borderWidth = 3.0
         bruhButton.clipsToBounds = true
-        //createLoopPlayer()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -65,36 +64,26 @@ class ViewController: UIViewController {
     }
     
     func createLoopPlayer() {
-        
-        //let buttonResource = NSUserDefaults.standardUserDefaults().dictionaryForKey("DefaultButton")!
-        //print("Default button: \(buttonResource)")
-        
         self.title = (currentButton["titleKey"] as! String)
         let resourceName = currentButton["descriptionKey"] as! String
         
         print(resourceName)
         
-        var url = NSURL()
+        bruhButton.setImage(UIImage(named: resourceName), forState: .Highlighted)
         
         if let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: ".m4a") {
-            url = NSURL(fileURLWithPath: path)
+            let url = NSURL(fileURLWithPath: path)
+            do {
+                loopPlayer = try AVAudioPlayer(contentsOfURL: url)
+                loopPlayer.prepareToPlay()
+                loopPlayer.numberOfLoops = 0
+            } catch {
+                let alert = UIAlertController(title: "Oops", message: "Looks like the clip could not load :(", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Okay :(", style: .Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         } else {
             let alert = UIAlertController(title: "Oops", message: "Looks like something didn't load quite right :(", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Okay :(", style: .Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
-        
-        //let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: ".m4a")
-        //print("File path: \(path)")
-        //let url = NSURL(fileURLWithPath: path!)
-        
-        do {
-            loopPlayer = try AVAudioPlayer(contentsOfURL: url)
-            loopPlayer.prepareToPlay()
-            loopPlayer.numberOfLoops = 0
-        } catch {
-            print("The sound could not be initialized")
-            let alert = UIAlertController(title: "Oops", message: "Looks like the clip could not load :(", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Okay :(", style: .Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
@@ -123,6 +112,7 @@ extension ViewController: ButtonSelectionDelegate {
         loopPlayer.stop()
         currentButton = sender
         print("Current after selection: \(currentButton)")
+        NSUserDefaults.standardUserDefaults().setObject(sender, forKey: "LastButtonUsed")
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     

@@ -15,14 +15,15 @@ protocol ButtonSelectionDelegate: class {
 
 class ButtonSelectionViewController: UITableViewController {
     
-    //let menuOptions = ["Default button", "Button shortcuts", "When relaunching, use..."]
-    
     var buttonOptions = NSMutableArray()
     let descriptionKey = "descriptionKey"
     let titleKey = "titleKey"
     var titleString = ""
     var source = ""
     var lastUsed: AnyObject?
+    var defaultButton: AnyObject?
+    var selectedButton: AnyObject?
+    var selectedIndex = -1
     weak var delegate:ButtonSelectionDelegate?
     
     override func viewDidLoad() {
@@ -42,6 +43,8 @@ class ButtonSelectionViewController: UITableViewController {
         
         if source == "fromHome" {
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancelSelection")
+        } else {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "saveDefaultButton")
         }
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
@@ -49,7 +52,7 @@ class ButtonSelectionViewController: UITableViewController {
         self.tableView.separatorStyle = .None
         
         lastUsed = NSUserDefaults.standardUserDefaults().dictionaryForKey("LastButtonUsed")
-        print("Last button used: \(lastUsed!)")
+        defaultButton = NSUserDefaults.standardUserDefaults().dictionaryForKey("DefaultButton")
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,9 +73,25 @@ class ButtonSelectionViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
         
-        let titleText = buttonOptions.objectAtIndex(indexPath.row).objectForKey(titleKey) as! String
+        let defaultTitle = defaultButton!.objectForKey("titleKey") as! String
+        let lastUsedTitle = lastUsed!.objectForKey("titleKey") as! String
+        let button = buttonOptions.objectAtIndex(indexPath.row)
+        let titleText = button.objectForKey("titleKey") as! String
+        
+        if source == "fromHome" {
+            if titleText == lastUsedTitle {
+                cell.accessoryType = .Checkmark
+            }
+        } else {
+            if titleText == defaultTitle {
+                cell.accessoryType = .Checkmark
+                selectedIndex = indexPath.row
+                selectedButton = button
+            }
+        }
         
         cell.backgroundColor = UIColor.clearColor()
+        cell.selectionStyle = .None
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = titleText
         
@@ -80,11 +99,28 @@ class ButtonSelectionViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.delegate?.didSelectButton(buttonOptions.objectAtIndex(indexPath.row) as! [String : AnyObject])
+        
+        if source == "fromHome" {
+            self.delegate?.didSelectButton(buttonOptions.objectAtIndex(indexPath.row) as! [String : AnyObject])
+        } else {
+            if indexPath.row != self.selectedIndex {
+                let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: self.selectedIndex, inSection: 0))
+                let newCell = tableView.cellForRowAtIndexPath(indexPath)
+                cell?.accessoryType = .None
+                newCell?.accessoryType = .Checkmark
+                self.selectedIndex = indexPath.row
+                self.selectedButton = self.buttonOptions.objectAtIndex(indexPath.row)
+            }
+        }
+        
     }
     
     func cancelSelection() {
         self.delegate?.didCancel()
+    }
+    
+    func saveDefaultButton() {
+        self.delegate?.didSelectButton(selectedButton as! [String: AnyObject])
     }
     
     func createButtonOptions() {
@@ -105,9 +141,6 @@ class ButtonSelectionViewController: UITableViewController {
         let wrapItUp = [titleKey: "Wrap It Up", descriptionKey: "wrap-it-up-music"]
         
         buttonOptions.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, shazam, thatsEasy, sheSaid, wrapItUp])
-        
-        self.tableView.reloadData()
-        
     }
     
 }

@@ -10,16 +10,20 @@ import UIKit
 
 class SettingsViewController: UITableViewController {
     
-    let menuOptions = ["Default button", "Button shortcuts", "When relaunching, use..."]
+    let menuOptions = ["Default button", "Button shortcuts", "Use Default Button"]
+    var useDefault: UISwitch?
+    var shouldUseDefault = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        shouldUseDefault = NSUserDefaults.standardUserDefaults().boolForKey("UseDefault")
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         self.tableView.backgroundColor = UIColor.init(red: 56/255, green: 3/255, blue: 98/255, alpha: 1.0)
         self.tableView.separatorStyle = .None
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
+        //self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: self, action: nil)
         self.title = "Settings"
     }
 
@@ -27,16 +31,19 @@ class SettingsViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func switchToggled(sender: UISwitch) {
+        shouldUseDefault = sender.on ? true : false
+        NSUserDefaults.standardUserDefaults().setBool(shouldUseDefault, forKey: "UseDefault")
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return menuOptions.count
     }
 
@@ -44,13 +51,16 @@ class SettingsViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
         
-        //cell = UITableViewCell(style: .Value1, reuseIdentifier: "reuseIdentifier")
-        
         cell.backgroundColor = UIColor.clearColor()
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = menuOptions[indexPath.row]
-        cell.detailTextLabel?.textColor = UIColor.lightGrayColor()
-        cell.detailTextLabel?.text = "Option"
+        
+        if indexPath.row == 2 {
+            useDefault = UISwitch()
+            useDefault?.addTarget(self, action: "switchToggled:", forControlEvents: .ValueChanged)
+            useDefault?.setOn(shouldUseDefault, animated: false)
+            cell.accessoryView = self.useDefault!
+        }
         
         return cell
     }
@@ -59,55 +69,23 @@ class SettingsViewController: UITableViewController {
         if indexPath.row == 0 {
             let buttonSelection = ButtonSelectionViewController()
             buttonSelection.titleString = "Choose a default button"
+            buttonSelection.delegate = self
             self.navigationController?.pushViewController(buttonSelection, animated: true)
             
         }
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+    }
+
+}
+
+extension SettingsViewController: ButtonSelectionDelegate {
+    func didSelectButton(sender: [String : AnyObject]) {
+        NSUserDefaults.standardUserDefaults().setObject(sender, forKey: "DefaultButton")
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func didCancel() {
+        print("Nothing to do here")
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
