@@ -11,6 +11,7 @@
 		04227ACE1C5D534900D075C2 /* System-settings-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04227ACB1C5D534900D075C2 /* System-settings-icon@2x.png */; };
 		04227ACF1C5D534900D075C2 /* System-settings-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04227ACC1C5D534900D075C2 /* System-settings-icon@3x.png */; };
 		04227AD11C5D558C00D075C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04227AD01C5D558C00D075C2 /* SettingsViewController.swift */; };
+		042615C41C69AEF300E351EC /* instarapairhorn.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 042615C31C69AEF300E351EC /* instarapairhorn.m4a */; };
 		043EF5201C615B8300733477 /* DefaultSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043EF51F1C615B8300733477 /* DefaultSettings.plist */; };
 		044596241C651A5C00C84172 /* wrap-it-up-music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3F0B7B4C1C6194130086F47B /* wrap-it-up-music.m4a */; };
 		044596251C651A6000C84172 /* thats-what-she-said.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3F0B7B4B1C6194130086F47B /* thats-what-she-said.m4a */; };
@@ -60,6 +61,7 @@
 		04227ACC1C5D534900D075C2 /* System-settings-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "System-settings-icon@3x.png"; sourceTree = "<group>"; };
 		04227AD01C5D558C00D075C2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		04227AD41C5D7C3300D075C2 /* stringConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stringConstants.h; sourceTree = "<group>"; };
+		042615C31C69AEF300E351EC /* instarapairhorn.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = instarapairhorn.m4a; sourceTree = "<group>"; };
 		043EF51F1C615B8300733477 /* DefaultSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultSettings.plist; sourceTree = "<group>"; };
 		044596321C65286800C84172 /* archer-fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "archer-fail.png"; sourceTree = "<group>"; };
 		044596331C65286800C84172 /* bon-qui-girl-i-cut-him.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bon-qui-girl-i-cut-him.png"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				3F0B7B461C6194130086F47B /* got-him.m4a */,
 				3F0B7B471C6194130086F47B /* gotcha-bitch.m4a */,
 				3F0B7B481C6194130086F47B /* hah-gay.m4a */,
+				042615C31C69AEF300E351EC /* instarapairhorn.m4a */,
 				3F0B7B491C6194130086F47B /* shazam.m4a */,
 				3F0B7B4A1C6194130086F47B /* that-was-easy.m4a */,
 				3F0B7B4B1C6194130086F47B /* thats-what-she-said.m4a */,
@@ -304,6 +307,7 @@
 				0445962E1C651A7800C84172 /* bon-qui-security.m4a in Resources */,
 				0445962F1C651A7A00C84172 /* bon-qui-girl-i-cut-him.m4a in Resources */,
 				047286481C57F28300F08547 /* Assets.xcassets in Resources */,
+				042615C41C69AEF300E351EC /* instarapairhorn.m4a in Resources */,
 				04227ACD1C5D534900D075C2 /* System-settings-icon.png in Resources */,
 				047286461C57F28300F08547 /* Main.storyboard in Resources */,
 				044596401C65286800C84172 /* bon-qui-girl-i-cut-him.png in Resources */,

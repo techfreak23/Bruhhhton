@@ -135,12 +135,13 @@ class ButtonSelectionViewController: UITableViewController {
         let gotHim = [titleKey: "Got Em", descriptionKey: "got-him"]
         let gotchaBitch = [titleKey: "Gotcha Bitch", descriptionKey: "gotcha-bitch"]
         let hahGay = [titleKey: "Ha Gay", descriptionKey: "hah-gay"]
+        let instaRap = [titleKey: "Airhorn", descriptionKey: "instarapairhorn"]
         let shazam = [titleKey: "Shazam", descriptionKey: "shazam"]
         let thatsEasy = [titleKey: "That Was Easy", descriptionKey: "that-was-easy"]
         let sheSaid = [titleKey: "That's What She Said", descriptionKey: "thats-what-she-said"]
         let wrapItUp = [titleKey: "Wrap It Up", descriptionKey: "wrap-it-up-music"]
         
-        buttonOptions.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, shazam, thatsEasy, sheSaid, wrapItUp])
+        buttonOptions.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, instaRap, shazam, thatsEasy, sheSaid, wrapItUp])
     }
     
 }
