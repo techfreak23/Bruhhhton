@@ -31,7 +31,7 @@ class SettingsViewController: UITableViewController {
     }
     
     func switchToggled(sender: UISwitch) {
-        shouldUseDefault = sender.on ? true : false
+        shouldUseDefault = sender.on ? true : false        
         NSUserDefaults.standardUserDefaults().setBool(shouldUseDefault, forKey: "UseDefault")
     }
 

@@ -69,10 +69,11 @@ class ViewController: UIViewController {
         
         print(resourceName)
         
-        bruhButton.setImage(UIImage(named: resourceName), forState: .Highlighted)
+        bruhButton.setImage(UIImage(named: resourceName), forState: .Normal)
         
         if let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: ".m4a") {
             let url = NSURL(fileURLWithPath: path)
+            print("File URL: \(url)")
             do {
                 loopPlayer = try AVAudioPlayer(contentsOfURL: url)
                 loopPlayer.prepareToPlay()
