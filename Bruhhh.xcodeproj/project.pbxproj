@@ -42,6 +42,14 @@
 		0445964A1C65286800C84172 /* that-was-easy.png in Resources */ = {isa = PBXBuildFile; fileRef = 0445963D1C65286800C84172 /* that-was-easy.png */; };
 		0445964B1C65286800C84172 /* thats-what-she-said.png in Resources */ = {isa = PBXBuildFile; fileRef = 0445963E1C65286800C84172 /* thats-what-she-said.png */; };
 		0445964D1C65287C00C84172 /* bruh-sound-effect.png in Resources */ = {isa = PBXBuildFile; fileRef = 0445964C1C65287C00C84172 /* bruh-sound-effect.png */; };
+		046388601C6D973800B57CC2 /* jesus-christ-kid.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0463885D1C6D973800B57CC2 /* jesus-christ-kid.m4a */; };
+		046388611C6D973800B57CC2 /* linda-listen.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0463885E1C6D973800B57CC2 /* linda-listen.m4a */; };
+		046388621C6D973800B57CC2 /* okay-then-what.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0463885F1C6D973800B57CC2 /* okay-then-what.m4a */; };
+		046388661C6D974800B57CC2 /* jesus-christ-kid.png in Resources */ = {isa = PBXBuildFile; fileRef = 046388631C6D974800B57CC2 /* jesus-christ-kid.png */; };
+		046388671C6D974800B57CC2 /* okay-then-what.png in Resources */ = {isa = PBXBuildFile; fileRef = 046388641C6D974800B57CC2 /* okay-then-what.png */; };
+		046388681C6D974800B57CC2 /* linda-listen.png in Resources */ = {isa = PBXBuildFile; fileRef = 046388651C6D974800B57CC2 /* linda-listen.png */; };
+		0463886A1C6D9B3B00B57CC2 /* okay-kanye-song.png in Resources */ = {isa = PBXBuildFile; fileRef = 046388691C6D9B3B00B57CC2 /* okay-kanye-song.png */; };
+		0463886C1C6D9B8E00B57CC2 /* okay-kanye-song.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0463886B1C6D9B4500B57CC2 /* okay-kanye-song.m4a */; };
 		04699E3A1C6571A900F9FE4F /* wrap-it-up-music.png in Resources */ = {isa = PBXBuildFile; fileRef = 04699E391C6571A900F9FE4F /* wrap-it-up-music.png */; };
 		047286411C57F28300F08547 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047286401C57F28300F08547 /* AppDelegate.swift */; };
 		047286431C57F28300F08547 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047286421C57F28300F08547 /* ViewController.swift */; };
@@ -79,6 +87,14 @@
 		0445963D1C65286800C84172 /* that-was-easy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "that-was-easy.png"; sourceTree = "<group>"; };
 		0445963E1C65286800C84172 /* thats-what-she-said.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thats-what-she-said.png"; sourceTree = "<group>"; };
 		0445964C1C65287C00C84172 /* bruh-sound-effect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bruh-sound-effect.png"; sourceTree = "<group>"; };
+		0463885D1C6D973800B57CC2 /* jesus-christ-kid.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jesus-christ-kid.m4a"; sourceTree = "<group>"; };
+		0463885E1C6D973800B57CC2 /* linda-listen.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "linda-listen.m4a"; sourceTree = "<group>"; };
+		0463885F1C6D973800B57CC2 /* okay-then-what.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "okay-then-what.m4a"; sourceTree = "<group>"; };
+		046388631C6D974800B57CC2 /* jesus-christ-kid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jesus-christ-kid.png"; sourceTree = "<group>"; };
+		046388641C6D974800B57CC2 /* okay-then-what.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "okay-then-what.png"; sourceTree = "<group>"; };
+		046388651C6D974800B57CC2 /* linda-listen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linda-listen.png"; sourceTree = "<group>"; };
+		046388691C6D9B3B00B57CC2 /* okay-kanye-song.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "okay-kanye-song.png"; sourceTree = "<group>"; };
+		0463886B1C6D9B4500B57CC2 /* okay-kanye-song.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "okay-kanye-song.m4a"; sourceTree = "<group>"; };
 		04699E391C6571A900F9FE4F /* wrap-it-up-music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wrap-it-up-music.png"; sourceTree = "<group>"; };
 		0472863D1C57F28300F08547 /* Bruhhh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bruhhh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047286401C57F28300F08547 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +156,10 @@
 				3F0B7B4B1C6194130086F47B /* thats-what-she-said.m4a */,
 				3F0B7B4C1C6194130086F47B /* wrap-it-up-music.m4a */,
 				047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */,
+				0463885D1C6D973800B57CC2 /* jesus-christ-kid.m4a */,
+				0463885E1C6D973800B57CC2 /* linda-listen.m4a */,
+				0463885F1C6D973800B57CC2 /* okay-then-what.m4a */,
+				0463886B1C6D9B4500B57CC2 /* okay-kanye-song.m4a */,
 			);
 			name = "Sound bites";
 			sourceTree = "<group>";
@@ -169,6 +189,10 @@
 				04227ACA1C5D534900D075C2 /* System-settings-icon.png */,
 				04227ACB1C5D534900D075C2 /* System-settings-icon@2x.png */,
 				04227ACC1C5D534900D075C2 /* System-settings-icon@3x.png */,
+				046388631C6D974800B57CC2 /* jesus-christ-kid.png */,
+				046388641C6D974800B57CC2 /* okay-then-what.png */,
+				046388651C6D974800B57CC2 /* linda-listen.png */,
+				046388691C6D9B3B00B57CC2 /* okay-kanye-song.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -284,6 +308,7 @@
 				0445962A1C651A6D00C84172 /* deez-nuts.m4a in Resources */,
 				04B996521C5D9E1D003CFAAC /* menu-icon@3x.png in Resources */,
 				0472864B1C57F28300F08547 /* LaunchScreen.storyboard in Resources */,
+				046388611C6D973800B57CC2 /* linda-listen.m4a in Resources */,
 				0445962C1C651A7200C84172 /* bye-felicia.m4a in Resources */,
 				0445962D1C651A7500C84172 /* bon-qui-rude.m4a in Resources */,
 				044596251C651A6000C84172 /* thats-what-she-said.m4a in Resources */,
@@ -298,25 +323,32 @@
 				043EF5201C615B8300733477 /* DefaultSettings.plist in Resources */,
 				04227ACE1C5D534900D075C2 /* System-settings-icon@2x.png in Resources */,
 				044596311C651A8500C84172 /* gotcha-bitch.m4a in Resources */,
+				046388681C6D974800B57CC2 /* linda-listen.png in Resources */,
 				044596411C65286800C84172 /* bon-qui-rude.png in Resources */,
 				044596281C651A6800C84172 /* shazam.m4a in Resources */,
 				044596241C651A5C00C84172 /* wrap-it-up-music.m4a in Resources */,
 				044596291C651A6B00C84172 /* got-him.m4a in Resources */,
 				044596471C65286800C84172 /* gotcha-bitch.png in Resources */,
+				046388601C6D973800B57CC2 /* jesus-christ-kid.m4a in Resources */,
 				0445964A1C65286800C84172 /* that-was-easy.png in Resources */,
 				04699E3A1C6571A900F9FE4F /* wrap-it-up-music.png in Resources */,
 				04B996501C5D9E1D003CFAAC /* menu-icon.png in Resources */,
 				044596421C65286800C84172 /* bon-qui-security.png in Resources */,
 				044596271C651A6500C84172 /* hah-gay.m4a in Resources */,
+				046388661C6D974800B57CC2 /* jesus-christ-kid.png in Resources */,
+				0463886A1C6D9B3B00B57CC2 /* okay-kanye-song.png in Resources */,
 				0445962E1C651A7800C84172 /* bon-qui-security.m4a in Resources */,
 				0445962F1C651A7A00C84172 /* bon-qui-girl-i-cut-him.m4a in Resources */,
 				047286481C57F28300F08547 /* Assets.xcassets in Resources */,
 				042615C41C69AEF300E351EC /* instarapairhorn.m4a in Resources */,
+				046388621C6D973800B57CC2 /* okay-then-what.m4a in Resources */,
 				04227ACD1C5D534900D075C2 /* System-settings-icon.png in Resources */,
 				047286461C57F28300F08547 /* Main.storyboard in Resources */,
+				046388671C6D974800B57CC2 /* okay-then-what.png in Resources */,
 				044596401C65286800C84172 /* bon-qui-girl-i-cut-him.png in Resources */,
 				044596261C651A6300C84172 /* that-was-easy.m4a in Resources */,
 				0445964B1C65286800C84172 /* thats-what-she-said.png in Resources */,
+				0463886C1C6D9B8E00B57CC2 /* okay-kanye-song.m4a in Resources */,
 				044596451C65286800C84172 /* deez-nuts.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

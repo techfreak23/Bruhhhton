@@ -124,6 +124,7 @@ class ButtonSelectionViewController: UITableViewController {
     }
     
     func createButtonOptions() {
+        let instaRap = [titleKey: "Airhorn", descriptionKey: "instarapairhorn"]
         let archerFail = [titleKey: "Archer Fail", descriptionKey: "archer-fail"]
         let cutHim = [titleKey: "Girl, I Cut Him", descriptionKey: "bon-qui-girl-i-cut-him"]
         let rude = [titleKey: "Rude", descriptionKey: "bon-qui-rude"]
@@ -135,13 +136,16 @@ class ButtonSelectionViewController: UITableViewController {
         let gotHim = [titleKey: "Got Em", descriptionKey: "got-him"]
         let gotchaBitch = [titleKey: "Gotcha Bitch", descriptionKey: "gotcha-bitch"]
         let hahGay = [titleKey: "Ha Gay", descriptionKey: "hah-gay"]
-        let instaRap = [titleKey: "Airhorn", descriptionKey: "instarapairhorn"]
+        let lindaListen = [titleKey: "Linda Listen!", descriptionKey: "linda-listen"]
+        let okayThenWhat = [titleKey: "Okay Then What?", descriptionKey: "okay-then-what"]
+        let okayKanye = [titleKey: "Okay", descriptionKey: "okay-kanye-song"]
+        let jesusChrist = [titleKey: "Jesus Christ", descriptionKey: "jesus-christ-kid"]
         let shazam = [titleKey: "Shazam", descriptionKey: "shazam"]
         let thatsEasy = [titleKey: "That Was Easy", descriptionKey: "that-was-easy"]
         let sheSaid = [titleKey: "That's What She Said", descriptionKey: "thats-what-she-said"]
         let wrapItUp = [titleKey: "Wrap It Up", descriptionKey: "wrap-it-up-music"]
         
-        buttonOptions.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, instaRap, shazam, thatsEasy, sheSaid, wrapItUp])
+        buttonOptions.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, lindaListen, okayThenWhat, okayKanye, jesusChrist, instaRap, shazam, thatsEasy, sheSaid, wrapItUp])
     }
     
 }
