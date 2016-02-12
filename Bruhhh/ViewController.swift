@@ -48,8 +48,13 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        print("View is appearing...")
+        super.viewWillAppear(animated)
         createLoopPlayer()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        loopPlayer.stop()
     }
 
     override func didReceiveMemoryWarning() {
