@@ -50,6 +50,8 @@
 		046388681C6D974800B57CC2 /* linda-listen.png in Resources */ = {isa = PBXBuildFile; fileRef = 046388651C6D974800B57CC2 /* linda-listen.png */; };
 		0463886A1C6D9B3B00B57CC2 /* okay-kanye-song.png in Resources */ = {isa = PBXBuildFile; fileRef = 046388691C6D9B3B00B57CC2 /* okay-kanye-song.png */; };
 		0463886C1C6D9B8E00B57CC2 /* okay-kanye-song.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0463886B1C6D9B4500B57CC2 /* okay-kanye-song.m4a */; };
+		0463886E1C6D9D0000B57CC2 /* okay-vine.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0463886D1C6D9D0000B57CC2 /* okay-vine.m4a */; };
+		046388701C6D9D3100B57CC2 /* okay-vine.png in Resources */ = {isa = PBXBuildFile; fileRef = 0463886F1C6D9D3100B57CC2 /* okay-vine.png */; };
 		04699E3A1C6571A900F9FE4F /* wrap-it-up-music.png in Resources */ = {isa = PBXBuildFile; fileRef = 04699E391C6571A900F9FE4F /* wrap-it-up-music.png */; };
 		047286411C57F28300F08547 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047286401C57F28300F08547 /* AppDelegate.swift */; };
 		047286431C57F28300F08547 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047286421C57F28300F08547 /* ViewController.swift */; };
@@ -95,6 +97,8 @@
 		046388651C6D974800B57CC2 /* linda-listen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linda-listen.png"; sourceTree = "<group>"; };
 		046388691C6D9B3B00B57CC2 /* okay-kanye-song.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "okay-kanye-song.png"; sourceTree = "<group>"; };
 		0463886B1C6D9B4500B57CC2 /* okay-kanye-song.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "okay-kanye-song.m4a"; sourceTree = "<group>"; };
+		0463886D1C6D9D0000B57CC2 /* okay-vine.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "okay-vine.m4a"; sourceTree = "<group>"; };
+		0463886F1C6D9D3100B57CC2 /* okay-vine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "okay-vine.png"; sourceTree = "<group>"; };
 		04699E391C6571A900F9FE4F /* wrap-it-up-music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wrap-it-up-music.png"; sourceTree = "<group>"; };
 		0472863D1C57F28300F08547 /* Bruhhh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bruhhh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047286401C57F28300F08547 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				0463885E1C6D973800B57CC2 /* linda-listen.m4a */,
 				0463885F1C6D973800B57CC2 /* okay-then-what.m4a */,
 				0463886B1C6D9B4500B57CC2 /* okay-kanye-song.m4a */,
+				0463886D1C6D9D0000B57CC2 /* okay-vine.m4a */,
 			);
 			name = "Sound bites";
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				046388641C6D974800B57CC2 /* okay-then-what.png */,
 				046388651C6D974800B57CC2 /* linda-listen.png */,
 				046388691C6D9B3B00B57CC2 /* okay-kanye-song.png */,
+				0463886F1C6D9D3100B57CC2 /* okay-vine.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 				043EF5201C615B8300733477 /* DefaultSettings.plist in Resources */,
 				04227ACE1C5D534900D075C2 /* System-settings-icon@2x.png in Resources */,
 				044596311C651A8500C84172 /* gotcha-bitch.m4a in Resources */,
+				046388701C6D9D3100B57CC2 /* okay-vine.png in Resources */,
 				046388681C6D974800B57CC2 /* linda-listen.png in Resources */,
 				044596411C65286800C84172 /* bon-qui-rude.png in Resources */,
 				044596281C651A6800C84172 /* shazam.m4a in Resources */,
@@ -330,6 +337,7 @@
 				044596291C651A6B00C84172 /* got-him.m4a in Resources */,
 				044596471C65286800C84172 /* gotcha-bitch.png in Resources */,
 				046388601C6D973800B57CC2 /* jesus-christ-kid.m4a in Resources */,
+				0463886E1C6D9D0000B57CC2 /* okay-vine.m4a in Resources */,
 				0445964A1C65286800C84172 /* that-was-easy.png in Resources */,
 				04699E3A1C6571A900F9FE4F /* wrap-it-up-music.png in Resources */,
 				04B996501C5D9E1D003CFAAC /* menu-icon.png in Resources */,
