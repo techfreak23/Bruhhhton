@@ -60,6 +60,18 @@
 		0472864B1C57F28300F08547 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047286491C57F28300F08547 /* LaunchScreen.storyboard */; };
 		047286531C57F55700F08547 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047286521C57F55700F08547 /* AVFoundation.framework */; };
 		047286571C57F8DE00F08547 /* bruh-sound-effect.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */; };
+		04AC88771C7568600025E35E /* okay-shiba-san.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 04AC88761C7568600025E35E /* okay-shiba-san.m4a */; };
+		04AC88791C7568730025E35E /* okay-shiba-san.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AC88781C7568730025E35E /* okay-shiba-san.png */; };
+		04AC887F1C75FDD80025E35E /* rick-james-security.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 04AC887A1C75FDD80025E35E /* rick-james-security.m4a */; };
+		04AC88801C75FDD80025E35E /* rick-james-look-bitch.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 04AC887B1C75FDD80025E35E /* rick-james-look-bitch.m4a */; };
+		04AC88811C75FDD80025E35E /* rick-james-celebration.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 04AC887C1C75FDD80025E35E /* rick-james-celebration.m4a */; };
+		04AC88821C75FDD80025E35E /* rick-james-unity.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 04AC887D1C75FDD80025E35E /* rick-james-unity.m4a */; };
+		04AC88831C75FDD80025E35E /* rick-james-cold-blooded.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 04AC887E1C75FDD80025E35E /* rick-james-cold-blooded.m4a */; };
+		04AC88891C7600150025E35E /* rick-james-security.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AC88841C7600150025E35E /* rick-james-security.png */; };
+		04AC888A1C7600150025E35E /* rick-james-celebration.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AC88851C7600150025E35E /* rick-james-celebration.png */; };
+		04AC888B1C7600150025E35E /* rick-james-unity.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AC88861C7600150025E35E /* rick-james-unity.png */; };
+		04AC888C1C7600150025E35E /* rick-james-look-bitch.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AC88871C7600150025E35E /* rick-james-look-bitch.png */; };
+		04AC888D1C7600150025E35E /* rick-james-cold-blooded.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AC88881C7600150025E35E /* rick-james-cold-blooded.png */; };
 		04B9964C1C5D9B10003CFAAC /* ButtonSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9964B1C5D9B10003CFAAC /* ButtonSelectionViewController.swift */; };
 		04B996501C5D9E1D003CFAAC /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B9964D1C5D9E1D003CFAAC /* menu-icon.png */; };
 		04B996511C5D9E1D003CFAAC /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B9964E1C5D9E1D003CFAAC /* menu-icon@2x.png */; };
@@ -111,6 +123,18 @@
 		0472864C1C57F28300F08547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047286521C57F55700F08547 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bruh-sound-effect.m4a"; sourceTree = "<group>"; };
+		04AC88761C7568600025E35E /* okay-shiba-san.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "okay-shiba-san.m4a"; sourceTree = "<group>"; };
+		04AC88781C7568730025E35E /* okay-shiba-san.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "okay-shiba-san.png"; sourceTree = "<group>"; };
+		04AC887A1C75FDD80025E35E /* rick-james-security.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rick-james-security.m4a"; sourceTree = "<group>"; };
+		04AC887B1C75FDD80025E35E /* rick-james-look-bitch.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rick-james-look-bitch.m4a"; sourceTree = "<group>"; };
+		04AC887C1C75FDD80025E35E /* rick-james-celebration.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rick-james-celebration.m4a"; sourceTree = "<group>"; };
+		04AC887D1C75FDD80025E35E /* rick-james-unity.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rick-james-unity.m4a"; sourceTree = "<group>"; };
+		04AC887E1C75FDD80025E35E /* rick-james-cold-blooded.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rick-james-cold-blooded.m4a"; sourceTree = "<group>"; };
+		04AC88841C7600150025E35E /* rick-james-security.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rick-james-security.png"; sourceTree = "<group>"; };
+		04AC88851C7600150025E35E /* rick-james-celebration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rick-james-celebration.png"; sourceTree = "<group>"; };
+		04AC88861C7600150025E35E /* rick-james-unity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rick-james-unity.png"; sourceTree = "<group>"; };
+		04AC88871C7600150025E35E /* rick-james-look-bitch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rick-james-look-bitch.png"; sourceTree = "<group>"; };
+		04AC88881C7600150025E35E /* rick-james-cold-blooded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rick-james-cold-blooded.png"; sourceTree = "<group>"; };
 		04B9964B1C5D9B10003CFAAC /* ButtonSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSelectionViewController.swift; sourceTree = "<group>"; };
 		04B9964D1C5D9E1D003CFAAC /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
 		04B9964E1C5D9E1D003CFAAC /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
@@ -165,11 +189,17 @@
 				3F0B7B4B1C6194130086F47B /* thats-what-she-said.m4a */,
 				3F0B7B4C1C6194130086F47B /* wrap-it-up-music.m4a */,
 				047286551C57F8DE00F08547 /* bruh-sound-effect.m4a */,
+				04AC88761C7568600025E35E /* okay-shiba-san.m4a */,
 				0463885D1C6D973800B57CC2 /* jesus-christ-kid.m4a */,
 				0463885E1C6D973800B57CC2 /* linda-listen.m4a */,
 				0463885F1C6D973800B57CC2 /* okay-then-what.m4a */,
 				0463886B1C6D9B4500B57CC2 /* okay-kanye-song.m4a */,
 				0463886D1C6D9D0000B57CC2 /* okay-vine.m4a */,
+				04AC887A1C75FDD80025E35E /* rick-james-security.m4a */,
+				04AC887B1C75FDD80025E35E /* rick-james-look-bitch.m4a */,
+				04AC887C1C75FDD80025E35E /* rick-james-celebration.m4a */,
+				04AC887D1C75FDD80025E35E /* rick-james-unity.m4a */,
+				04AC887E1C75FDD80025E35E /* rick-james-cold-blooded.m4a */,
 			);
 			name = "Sound bites";
 			sourceTree = "<group>";
@@ -191,6 +221,7 @@
 				3FC7FABD1C7012C4003609E3 /* inception.png */,
 				040EA4E31C6A9680006169E3 /* instarapairhorn.png */,
 				0445963C1C65286800C84172 /* shazam.png */,
+				04AC88781C7568730025E35E /* okay-shiba-san.png */,
 				0445963D1C65286800C84172 /* that-was-easy.png */,
 				0445963E1C65286800C84172 /* thats-what-she-said.png */,
 				04699E391C6571A900F9FE4F /* wrap-it-up-music.png */,
@@ -205,6 +236,11 @@
 				046388651C6D974800B57CC2 /* linda-listen.png */,
 				046388691C6D9B3B00B57CC2 /* okay-kanye-song.png */,
 				0463886F1C6D9D3100B57CC2 /* okay-vine.png */,
+				04AC88841C7600150025E35E /* rick-james-security.png */,
+				04AC88851C7600150025E35E /* rick-james-celebration.png */,
+				04AC88861C7600150025E35E /* rick-james-unity.png */,
+				04AC88871C7600150025E35E /* rick-james-look-bitch.png */,
+				04AC88881C7600150025E35E /* rick-james-cold-blooded.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -320,6 +356,7 @@
 				0445962A1C651A6D00C84172 /* deez-nuts.m4a in Resources */,
 				04B996521C5D9E1D003CFAAC /* menu-icon@3x.png in Resources */,
 				0472864B1C57F28300F08547 /* LaunchScreen.storyboard in Resources */,
+				04AC88821C75FDD80025E35E /* rick-james-unity.m4a in Resources */,
 				046388611C6D973800B57CC2 /* linda-listen.m4a in Resources */,
 				3FC7FABC1C7012A2003609E3 /* inception.m4a in Resources */,
 				0445962C1C651A7200C84172 /* bye-felicia.m4a in Resources */,
@@ -330,6 +367,11 @@
 				04B996511C5D9E1D003CFAAC /* menu-icon@2x.png in Resources */,
 				04227ACF1C5D534900D075C2 /* System-settings-icon@3x.png in Resources */,
 				044596491C65286800C84172 /* shazam.png in Resources */,
+				04AC888B1C7600150025E35E /* rick-james-unity.png in Resources */,
+				04AC88811C75FDD80025E35E /* rick-james-celebration.m4a in Resources */,
+				04AC88801C75FDD80025E35E /* rick-james-look-bitch.m4a in Resources */,
+				04AC88831C75FDD80025E35E /* rick-james-cold-blooded.m4a in Resources */,
+				04AC888D1C7600150025E35E /* rick-james-cold-blooded.png in Resources */,
 				0445963F1C65286800C84172 /* archer-fail.png in Resources */,
 				044596301C651A7D00C84172 /* archer-fail.m4a in Resources */,
 				044596441C65286800C84172 /* dave-chappelle-hummina.png in Resources */,
@@ -341,6 +383,7 @@
 				044596411C65286800C84172 /* bon-qui-rude.png in Resources */,
 				044596281C651A6800C84172 /* shazam.m4a in Resources */,
 				044596241C651A5C00C84172 /* wrap-it-up-music.m4a in Resources */,
+				04AC887F1C75FDD80025E35E /* rick-james-security.m4a in Resources */,
 				044596291C651A6B00C84172 /* got-him.m4a in Resources */,
 				044596471C65286800C84172 /* gotcha-bitch.png in Resources */,
 				046388601C6D973800B57CC2 /* jesus-christ-kid.m4a in Resources */,
@@ -351,18 +394,23 @@
 				044596421C65286800C84172 /* bon-qui-security.png in Resources */,
 				044596271C651A6500C84172 /* hah-gay.m4a in Resources */,
 				046388661C6D974800B57CC2 /* jesus-christ-kid.png in Resources */,
+				04AC888A1C7600150025E35E /* rick-james-celebration.png in Resources */,
 				0463886A1C6D9B3B00B57CC2 /* okay-kanye-song.png in Resources */,
 				0445962E1C651A7800C84172 /* bon-qui-security.m4a in Resources */,
 				0445962F1C651A7A00C84172 /* bon-qui-girl-i-cut-him.m4a in Resources */,
+				04AC88891C7600150025E35E /* rick-james-security.png in Resources */,
 				047286481C57F28300F08547 /* Assets.xcassets in Resources */,
 				042615C41C69AEF300E351EC /* instarapairhorn.m4a in Resources */,
 				046388621C6D973800B57CC2 /* okay-then-what.m4a in Resources */,
+				04AC88771C7568600025E35E /* okay-shiba-san.m4a in Resources */,
 				3FC7FABE1C7012C4003609E3 /* inception.png in Resources */,
 				04227ACD1C5D534900D075C2 /* System-settings-icon.png in Resources */,
 				047286461C57F28300F08547 /* Main.storyboard in Resources */,
 				046388671C6D974800B57CC2 /* okay-then-what.png in Resources */,
 				044596401C65286800C84172 /* bon-qui-girl-i-cut-him.png in Resources */,
 				044596261C651A6300C84172 /* that-was-easy.m4a in Resources */,
+				04AC888C1C7600150025E35E /* rick-james-look-bitch.png in Resources */,
+				04AC88791C7568730025E35E /* okay-shiba-san.png in Resources */,
 				0445964B1C65286800C84172 /* thats-what-she-said.png in Resources */,
 				0463886C1C6D9B8E00B57CC2 /* okay-kanye-song.m4a in Resources */,
 				044596451C65286800C84172 /* deez-nuts.png in Resources */,

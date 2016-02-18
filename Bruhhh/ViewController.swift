@@ -115,7 +115,7 @@ class ViewController: UIViewController {
 
 extension ViewController: ButtonSelectionDelegate {
     func didSelectButton(sender: [String : AnyObject]) {
-        loopPlayer.stop()
+        //loopPlayer.stop()
         currentButton = sender
         NSUserDefaults.standardUserDefaults().setObject(sender, forKey: "LastButtonUsed")
         self.dismissViewControllerAnimated(true, completion: nil)

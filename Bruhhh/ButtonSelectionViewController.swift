@@ -141,13 +141,20 @@ class ButtonSelectionViewController: UITableViewController {
         let okayThenWhat = [titleKey: "Okay Then What?", descriptionKey: "okay-then-what"]
         let okayKanye = [titleKey: "Okay (Mercy)", descriptionKey: "okay-kanye-song"]
         let okayVine = [titleKey: "Okay (Vine)", descriptionKey: "okay-vine"]
+        let okayShiba = [titleKey: "Okay (Shiba San)", descriptionKey: "okay-shiba-san"]
         let jesusChrist = [titleKey: "Jesus Christ", descriptionKey: "jesus-christ-kid"]
         let shazam = [titleKey: "Shazam", descriptionKey: "shazam"]
         let thatsEasy = [titleKey: "That Was Easy", descriptionKey: "that-was-easy"]
         let sheSaid = [titleKey: "That's What She Said", descriptionKey: "thats-what-she-said"]
         let wrapItUp = [titleKey: "Wrap It Up", descriptionKey: "wrap-it-up-music"]
+        let rickSecurity = [titleKey: "Security (Rick James)", descriptionKey: "rick-james-security"]
+        let rickCelebration = [titleKey: "It's a Celebration", descriptionKey: "rick-james-celebration"]
+        let rickBitch = [titleKey: "Rick James, Bitch", descriptionKey: "rick-james-look-bitch"]
+        let rickUnity = [titleKey: "Unity", descriptionKey: "rick-james-unity"]
+        let rickCold = [titleKey: "Cold Blooded", descriptionKey: "rick-james-cold-blooded"]
         
-        buttonOptions.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, inception, lindaListen, okayThenWhat, okayKanye, okayVine, jesusChrist, instaRap, shazam, thatsEasy, sheSaid, wrapItUp])
+        
+        buttonOptions.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, inception, lindaListen, okayThenWhat, okayKanye, okayVine, okayShiba, rickSecurity, rickCelebration, rickBitch, rickUnity, rickCold, jesusChrist, instaRap, shazam, thatsEasy, sheSaid, wrapItUp])
     }
     
 }
