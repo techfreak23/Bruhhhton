@@ -42,6 +42,8 @@
 		0445964A1C65286800C84172 /* that-was-easy.png in Resources */ = {isa = PBXBuildFile; fileRef = 0445963D1C65286800C84172 /* that-was-easy.png */; };
 		0445964B1C65286800C84172 /* thats-what-she-said.png in Resources */ = {isa = PBXBuildFile; fileRef = 0445963E1C65286800C84172 /* thats-what-she-said.png */; };
 		0445964D1C65287C00C84172 /* bruh-sound-effect.png in Resources */ = {isa = PBXBuildFile; fileRef = 0445964C1C65287C00C84172 /* bruh-sound-effect.png */; };
+		044694D01C7CC31F00743C67 /* crack-kid-yeah.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 044694CF1C7CC31900743C67 /* crack-kid-yeah.m4a */; };
+		044694D21C7CC32B00743C67 /* crack-kid-yeah.png in Resources */ = {isa = PBXBuildFile; fileRef = 044694D11C7CC32B00743C67 /* crack-kid-yeah.png */; };
 		046388601C6D973800B57CC2 /* jesus-christ-kid.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0463885D1C6D973800B57CC2 /* jesus-christ-kid.m4a */; };
 		046388611C6D973800B57CC2 /* linda-listen.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0463885E1C6D973800B57CC2 /* linda-listen.m4a */; };
 		046388621C6D973800B57CC2 /* okay-then-what.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0463885F1C6D973800B57CC2 /* okay-then-what.m4a */; };
@@ -103,6 +105,8 @@
 		0445963D1C65286800C84172 /* that-was-easy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "that-was-easy.png"; sourceTree = "<group>"; };
 		0445963E1C65286800C84172 /* thats-what-she-said.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thats-what-she-said.png"; sourceTree = "<group>"; };
 		0445964C1C65287C00C84172 /* bruh-sound-effect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bruh-sound-effect.png"; sourceTree = "<group>"; };
+		044694CF1C7CC31900743C67 /* crack-kid-yeah.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "crack-kid-yeah.m4a"; sourceTree = "<group>"; };
+		044694D11C7CC32B00743C67 /* crack-kid-yeah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crack-kid-yeah.png"; sourceTree = "<group>"; };
 		0463885D1C6D973800B57CC2 /* jesus-christ-kid.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jesus-christ-kid.m4a"; sourceTree = "<group>"; };
 		0463885E1C6D973800B57CC2 /* linda-listen.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "linda-listen.m4a"; sourceTree = "<group>"; };
 		0463885F1C6D973800B57CC2 /* okay-then-what.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "okay-then-what.m4a"; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 				04AC887C1C75FDD80025E35E /* rick-james-celebration.m4a */,
 				04AC887D1C75FDD80025E35E /* rick-james-unity.m4a */,
 				04AC887E1C75FDD80025E35E /* rick-james-cold-blooded.m4a */,
+				044694CF1C7CC31900743C67 /* crack-kid-yeah.m4a */,
 			);
 			name = "Sound bites";
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				04AC88861C7600150025E35E /* rick-james-unity.png */,
 				04AC88871C7600150025E35E /* rick-james-look-bitch.png */,
 				04AC88881C7600150025E35E /* rick-james-cold-blooded.png */,
+				044694D11C7CC32B00743C67 /* crack-kid-yeah.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 				0445962C1C651A7200C84172 /* bye-felicia.m4a in Resources */,
 				0445962D1C651A7500C84172 /* bon-qui-rude.m4a in Resources */,
 				044596251C651A6000C84172 /* thats-what-she-said.m4a in Resources */,
+				044694D01C7CC31F00743C67 /* crack-kid-yeah.m4a in Resources */,
 				044596481C65286800C84172 /* hah-gay.png in Resources */,
 				044596431C65286800C84172 /* bye-felicia.png in Resources */,
 				04B996511C5D9E1D003CFAAC /* menu-icon@2x.png in Resources */,
@@ -369,6 +376,7 @@
 				044596491C65286800C84172 /* shazam.png in Resources */,
 				04AC888B1C7600150025E35E /* rick-james-unity.png in Resources */,
 				04AC88811C75FDD80025E35E /* rick-james-celebration.m4a in Resources */,
+				044694D21C7CC32B00743C67 /* crack-kid-yeah.png in Resources */,
 				04AC88801C75FDD80025E35E /* rick-james-look-bitch.m4a in Resources */,
 				04AC88831C75FDD80025E35E /* rick-james-cold-blooded.m4a in Resources */,
 				04AC888D1C7600150025E35E /* rick-james-cold-blooded.png in Resources */,

@@ -15,14 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var buttonOptions: NSMutableArray?
     var buttonShortcuts: NSMutableArray?
     var userDefaults: NSMutableDictionary?
+    var launchedShortcutItem: UIApplicationShortcutItem?
     let descriptionKey = "descriptionKey"
     let titleKey = "titleKey"
+    let shortcutKey = "ShortcutButtons"
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
         registerDefaults()
+        
+        
         
         return true
     }
@@ -57,7 +61,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     }
     
-
+    func handleShortcutItem(shortcutItem: UIApplicationShortcutItem) {
+        print("Handled shortcut item for name \(shortcutItem.type)")
+    }
+    
+    /*
+    func traitCollectionDidChange(previousTrait: UITraitCollection?) {
+        print("Collection trait did change \(previousTrait)")
+    }
+    */
 
 }
 

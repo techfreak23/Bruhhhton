@@ -152,9 +152,10 @@ class ButtonSelectionViewController: UITableViewController {
         let rickBitch = [titleKey: "Rick James, Bitch", descriptionKey: "rick-james-look-bitch"]
         let rickUnity = [titleKey: "Unity", descriptionKey: "rick-james-unity"]
         let rickCold = [titleKey: "Cold Blooded", descriptionKey: "rick-james-cold-blooded"]
+        let crackKidYeah = [titleKey: "Crack Kid Yeah", descriptionKey: "crack-kid-yeah"]
         
         
-        buttonOptions.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, inception, lindaListen, okayThenWhat, okayKanye, okayVine, okayShiba, rickSecurity, rickCelebration, rickBitch, rickUnity, rickCold, jesusChrist, instaRap, shazam, thatsEasy, sheSaid, wrapItUp])
+        buttonOptions.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, inception, lindaListen, okayThenWhat, okayKanye, okayVine, okayShiba, rickSecurity, rickCelebration, rickBitch, rickUnity, rickCold, jesusChrist, instaRap, shazam, thatsEasy, sheSaid, wrapItUp, crackKidYeah])
     }
     
 }
