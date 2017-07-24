@@ -9,13 +9,15 @@
 import UIKit
 
 protocol ButtonSelectionDelegate: class {
-    func didSelectButton(sender: [String: AnyObject])
+    func didSelectButton(_ sender: [String: AnyObject])
     func didCancel()
+    func didSelectShortcuts()
 }
 
 class ButtonSelectionViewController: UITableViewController {
     
     var buttonOptions = NSMutableArray()
+    var buttonShortcuts = NSMutableArray()
     let descriptionKey = "descriptionKey"
     let titleKey = "titleKey"
     var titleString = ""
@@ -24,6 +26,7 @@ class ButtonSelectionViewController: UITableViewController {
     var defaultButton: AnyObject?
     var selectedButton: AnyObject?
     var selectedIndex = -1
+    
     weak var delegate:ButtonSelectionDelegate?
     
     override func viewDidLoad() {
@@ -33,26 +36,30 @@ class ButtonSelectionViewController: UITableViewController {
         
         self.title = titleString
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
-        let titleDict = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 56/255, green: 3/255, blue: 98/255, alpha: 1.0)
+        self.navigationController?.navigationBar.backgroundColor = UIColor.init(red: 56/255, green: 3/255, blue: 98/255, alpha: 1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        let titleDict = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict
         
         if source == "fromHome" {
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancelSelection")
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(ButtonSelectionViewController.cancelSelection))
         } else {
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "saveDefaultButton")
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(ButtonSelectionViewController.saveDefaultButton))
         }
         
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         self.tableView.backgroundColor = UIColor.init(red: 56/255, green: 3/255, blue: 98/255, alpha: 1.0)
-        self.tableView.separatorStyle = .None
+        self.tableView.separatorStyle = .none
         
-        lastUsed = NSUserDefaults.standardUserDefaults().dictionaryForKey("LastButtonUsed")
-        defaultButton = NSUserDefaults.standardUserDefaults().dictionaryForKey("DefaultButton")
+        lastUsed = UserDefaults.standard.dictionary(forKey: "LastButtonUsed") as AnyObject
+        defaultButton = UserDefaults.standard.dictionary(forKey: "DefaultButton") as AnyObject
+        buttonShortcuts.addObjects(from: UserDefaults.standard.array(forKey: "ShortcutButtons")!)
+        print("Button shortcuts: \(buttonShortcuts)")
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,66 +68,85 @@ class ButtonSelectionViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return buttonOptions.count
-    }
-    
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
         
-        let defaultTitle = defaultButton!.objectForKey("titleKey") as! String
-        let lastUsedTitle = lastUsed!.objectForKey("titleKey") as! String
-        let button = buttonOptions.objectAtIndex(indexPath.row)
-        let titleText = button.objectForKey("titleKey") as! String
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return buttonOptions.count
+        
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as UITableViewCell
+        
+        let defaultTitle = defaultButton!.object(forKey: "titleKey") as! String
+        let lastUsedTitle = lastUsed!.object(forKey: "titleKey") as! String
+        let button = buttonOptions.object(at: indexPath.row)
+        let titleText = (button as AnyObject).object(forKey: "titleKey") as! String
+        
+        print("Var: \(defaultTitle), \(lastUsedTitle), \(button), \(titleText)")
+        
         
         if source == "fromHome" {
             if titleText == lastUsedTitle {
-                cell.accessoryType = .Checkmark
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
             }
-        } else {
+        } else if source == "fromSettings" {
             if titleText == defaultTitle {
-                cell.accessoryType = .Checkmark
+                cell.accessoryType = .checkmark
                 selectedIndex = indexPath.row
-                selectedButton = button
+                selectedButton = button as AnyObject
+            } else {
+                cell.accessoryType = .none
             }
+        } else if source == "shortcutSelection" {
+            //let shortcutInfo =
+            //let cellTitle = buttonShortcuts.objectAtIndex(indexPath.row.
+            cell.accessoryType = .none
         }
         
-        cell.backgroundColor = UIColor.clearColor()
-        cell.selectionStyle = .None
-        cell.textLabel?.textColor = UIColor.whiteColor()
+        
+        cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
+        cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.text = titleText
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if source == "fromHome" {
-            self.delegate?.didSelectButton(buttonOptions.objectAtIndex(indexPath.row) as! [String : AnyObject])
+            self.delegate?.didSelectButton(buttonOptions.object(at: indexPath.row) as! [String : AnyObject])
         } else {
             if indexPath.row != self.selectedIndex {
-                let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: self.selectedIndex, inSection: 0))
-                let newCell = tableView.cellForRowAtIndexPath(indexPath)
-                cell?.accessoryType = .None
-                newCell?.accessoryType = .Checkmark
+                let cell = tableView.cellForRow(at: IndexPath(row: self.selectedIndex, section: 0))
+                let newCell = tableView.cellForRow(at: indexPath)
+                cell?.accessoryType = .none
+                newCell?.accessoryType = .checkmark
                 self.selectedIndex = indexPath.row
-                self.selectedButton = self.buttonOptions.objectAtIndex(indexPath.row)
+                self.selectedButton = self.buttonOptions.object(at: indexPath.row) as AnyObject
             }
         }
         
     }
     
-    func cancelSelection() {
+    @objc func cancelSelection() {
         self.delegate?.didCancel()
     }
     
-    func saveDefaultButton() {
-        self.delegate?.didSelectButton(selectedButton as! [String: AnyObject])
+    @objc func saveDefaultButton() {
+        if (source == "shortcutSelection") {
+            self.delegate?.didSelectShortcuts()
+        } else {
+            self.delegate?.didSelectButton(selectedButton as! [String: AnyObject])
+        }
     }
     
     func createButtonOptions() {
@@ -131,6 +157,7 @@ class ButtonSelectionViewController: UITableViewController {
         let security = [titleKey: "Security", descriptionKey: "bon-qui-security"]
         let bruh = [titleKey: "Bruh", descriptionKey: "bruh-sound-effect"]
         let byeFelicia = [titleKey: "Bye Felicia", descriptionKey: "bye-felicia"]
+        let cashMeOutside = [titleKey: "Cash Me Outside", descriptionKey: "cash-me-outside"]
         let hummina = [titleKey: "Hummina", descriptionKey: "dave-chappelle-hummina"]
         let deezNuts = [titleKey: "Deez Nuts", descriptionKey: "deez-nuts"]
         let gotHim = [titleKey: "Got Em", descriptionKey: "got-him"]
@@ -142,10 +169,12 @@ class ButtonSelectionViewController: UITableViewController {
         let okayKanye = [titleKey: "Okay (Mercy)", descriptionKey: "okay-kanye-song"]
         let okayVine = [titleKey: "Okay (Vine)", descriptionKey: "okay-vine"]
         let okayShiba = [titleKey: "Okay (Shiba San)", descriptionKey: "okay-shiba-san"]
+        let johnCena = [titleKey: "John Cena", descriptionKey: "john-cena"]
         let jesusChrist = [titleKey: "Jesus Christ", descriptionKey: "jesus-christ-kid"]
         let shazam = [titleKey: "Shazam", descriptionKey: "shazam"]
         let thatsEasy = [titleKey: "That Was Easy", descriptionKey: "that-was-easy"]
         let sheSaid = [titleKey: "That's What She Said", descriptionKey: "thats-what-she-said"]
+        let theShooting = [titleKey: "The Shooting", descriptionKey: "the-shooting"]
         let wrapItUp = [titleKey: "Wrap It Up", descriptionKey: "wrap-it-up-music"]
         let rickSecurity = [titleKey: "Security (Rick James)", descriptionKey: "rick-james-security"]
         let rickCelebration = [titleKey: "It's a Celebration", descriptionKey: "rick-james-celebration"]
@@ -153,9 +182,13 @@ class ButtonSelectionViewController: UITableViewController {
         let rickUnity = [titleKey: "Unity", descriptionKey: "rick-james-unity"]
         let rickCold = [titleKey: "Cold Blooded", descriptionKey: "rick-james-cold-blooded"]
         let crackKidYeah = [titleKey: "Crack Kid Yeah", descriptionKey: "crack-kid-yeah"]
+        let yaHuey = [titleKey: "Ya Huey", descriptionKey: "ya-huey"]
+        let pinchePendejo = [titleKey: "Pinche Pendejo", descriptionKey: "pinche-pendejo"]
+        let hueyScream = [titleKey: "Huey Scream", descriptionKey: "huey-scream"]
+        let whoIsIt = [titleKey: "Who Is It", descriptionKey: "who-is-it"]
+        let wilhelmScream = [titleKey: "Wilhelm Scream", descriptionKey: "wilhelm-scream"]
         
-        
-        buttonOptions.addObjectsFromArray([archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, inception, lindaListen, okayThenWhat, okayKanye, okayVine, okayShiba, rickSecurity, rickCelebration, rickBitch, rickUnity, rickCold, jesusChrist, instaRap, shazam, thatsEasy, sheSaid, wrapItUp, crackKidYeah])
+        buttonOptions.addObjects(from: [archerFail, cutHim, rude, security, bruh, byeFelicia, cashMeOutside, hummina, deezNuts, gotHim, gotchaBitch, hahGay, inception, lindaListen, okayThenWhat, okayKanye, okayVine, okayShiba, rickSecurity, rickCelebration, rickBitch, rickUnity, rickCold, johnCena, jesusChrist, instaRap, shazam, thatsEasy, sheSaid, theShooting, wrapItUp, crackKidYeah, yaHuey, pinchePendejo, hueyScream, whoIsIt, wilhelmScream])
     }
     
 }

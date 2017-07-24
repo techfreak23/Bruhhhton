@@ -14,6 +14,12 @@
 	<key>ShortcutButtons</key>
 	<array>
 		<dict>
+			<key>descriptionKey</key>
+			<string>instarapairhorn</string>
+			<key>titleKey</key>
+			<string>Airhorn</string>
+		</dict>
+		<dict>
 			<key>titleKey</key>
 			<string>Bruh</string>
 			<key>descriptionKey</key>

@@ -19,40 +19,42 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if NSUserDefaults.standardUserDefaults().boolForKey("UseDefault") {
-            currentButton = NSUserDefaults.standardUserDefaults().dictionaryForKey("DefaultButton")!
-            NSUserDefaults.standardUserDefaults().setObject(currentButton, forKey: "LastButtonUsed")
+        if UserDefaults.standard.bool(forKey: "UseDefault") {
+            currentButton = UserDefaults.standard.dictionary(forKey: "DefaultButton")! as [String : AnyObject]
+            UserDefaults.standard.set(currentButton, forKey: "LastButtonUsed")
             print("Current button: \(currentButton)")
         } else {
-            currentButton = NSUserDefaults.standardUserDefaults().dictionaryForKey("LastButtonUsed")!
+            currentButton = UserDefaults.standard.dictionary(forKey: "LastButtonUsed")! as [String : AnyObject]
             print("Last used button: \(currentButton)")
         }
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        let titleDict = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        let titleDict = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
+        //let foregroundColor: NSAttributedStringKey
+        print("Dict: \(titleDict)")
         self.navigationController?.navigationBar.titleTextAttributes = titleDict
         
         let buttonImage = UIImage(named: "System-settings-icon")
         let menuButtonImage = UIImage(named: "menu-icon")
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: buttonImage, style: .Plain, target: self, action: "showSettings")
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: menuButtonImage, style: .Plain, target: self, action: "showButtons")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: buttonImage, style: .plain, target: self, action: #selector(ViewController.showSettings))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: menuButtonImage, style: .plain, target: self, action: #selector(ViewController.showButtons))
         
         bruhButton.layer.cornerRadius = 100.0
-        bruhButton.layer.borderColor = UIColor.grayColor().CGColor
+        bruhButton.layer.borderColor = UIColor.gray.cgColor
         bruhButton.layer.borderWidth = 3.0
         bruhButton.clipsToBounds = true
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         createLoopPlayer()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         loopPlayer.stop()
     }
@@ -62,7 +64,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func playBruh(sender: AnyObject) {
+    @IBAction func playBruh(_ sender: AnyObject) {
         loopPlayer.currentTime = 0
         loopPlayer.play()
         
@@ -74,39 +76,40 @@ class ViewController: UIViewController {
         
         print(resourceName)
         
-        bruhButton.setImage(UIImage(named: resourceName), forState: .Normal)
+        bruhButton.setImage(UIImage(named: resourceName), for: UIControlState())
         
-        if let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: ".m4a") {
-            let url = NSURL(fileURLWithPath: path)
+        if let path = Bundle.main.path(forResource: resourceName, ofType: ".m4a") {
+            let url = URL(fileURLWithPath: path)
             print("File URL: \(url)")
             do {
-                loopPlayer = try AVAudioPlayer(contentsOfURL: url)
+                loopPlayer = try AVAudioPlayer(contentsOf: url)
                 loopPlayer.prepareToPlay()
                 loopPlayer.numberOfLoops = 0
             } catch {
-                let alert = UIAlertController(title: "Oops", message: "Looks like the clip could not load :(", preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "Okay :(", style: .Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
+                let alert = UIAlertController(title: "Oops", message: "Looks like the clip could not load :(", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Okay :(", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         } else {
-            let alert = UIAlertController(title: "Oops", message: "Looks like something didn't load quite right :(", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Okay :(", style: .Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Oops", message: "Looks like something didn't load quite right :(", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay :(", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
-    func showSettings() {
+    @objc func showSettings() {
         let settingsVC = SettingsViewController()
         self.navigationController?.pushViewController(settingsVC, animated: true)
     }
     
-    func showButtons() {
+    @objc func showButtons() {
         let buttonSelection = ButtonSelectionViewController()
         buttonSelection.titleString = "Choose a button"
         buttonSelection.source = "fromHome"
         buttonSelection.delegate = self
         let nav = UINavigationController(rootViewController: buttonSelection)
-        self.navigationController?.presentViewController(nav, animated: true, completion: nil)
+        self.navigationController?.present(nav, animated: true, completion: nil)
+        
     }
 
 }
@@ -114,15 +117,18 @@ class ViewController: UIViewController {
 // MARK: - Button selection delegate methods
 
 extension ViewController: ButtonSelectionDelegate {
-    func didSelectButton(sender: [String : AnyObject]) {
-        //loopPlayer.stop()
+    func didSelectButton(_ sender: [String : AnyObject]) {
         currentButton = sender
-        NSUserDefaults.standardUserDefaults().setObject(sender, forKey: "LastButtonUsed")
-        self.dismissViewControllerAnimated(true, completion: nil)
+        UserDefaults.standard.set(sender, forKey: "LastButtonUsed")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func didSelectShortcuts() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func didCancel() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
