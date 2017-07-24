@@ -14,16 +14,6 @@
 		04227AD11C5D558C00D075C2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04227AD01C5D558C00D075C2 /* SettingsViewController.swift */; };
 		042615C41C69AEF300E351EC /* instarapairhorn.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 042615C31C69AEF300E351EC /* instarapairhorn.m4a */; };
 		043EF5201C615B8300733477 /* DefaultSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043EF51F1C615B8300733477 /* DefaultSettings.plist */; };
-		0440E11A1F14118700C7CC2D /* the-shooting.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0440E1191F14118700C7CC2D /* the-shooting.m4a */; };
-		0440E11C1F14119200C7CC2D /* the-shooting.png in Resources */ = {isa = PBXBuildFile; fileRef = 0440E11B1F14119100C7CC2D /* the-shooting.png */; };
-		0440E11E1F14142900C7CC2D /* ya-huey.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0440E11D1F14142900C7CC2D /* ya-huey.m4a */; };
-		0440E1221F1414EC00C7CC2D /* pinche-pendejo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0440E1201F1414EC00C7CC2D /* pinche-pendejo.png */; };
-		0440E1231F1414EC00C7CC2D /* ya-huey.png in Resources */ = {isa = PBXBuildFile; fileRef = 0440E1211F1414EC00C7CC2D /* ya-huey.png */; };
-		0440E1251F14166000C7CC2D /* huey-scream.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0440E1241F14165F00C7CC2D /* huey-scream.m4a */; };
-		0440E1271F1416BC00C7CC2D /* wilhelm-scream.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0440E1261F1416BB00C7CC2D /* wilhelm-scream.m4a */; };
-		0440E1291F1416D600C7CC2D /* wilhelm-scream.png in Resources */ = {isa = PBXBuildFile; fileRef = 0440E1281F1416D600C7CC2D /* wilhelm-scream.png */; };
-		0440E12B1F1417AE00C7CC2D /* pinche-pendejo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0440E12A1F1417AD00C7CC2D /* pinche-pendejo.m4a */; };
-		0440E12D1F14183000C7CC2D /* huey-scream.png in Resources */ = {isa = PBXBuildFile; fileRef = 0440E12C1F14183000C7CC2D /* huey-scream.png */; };
 		044596241C651A5C00C84172 /* wrap-it-up-music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3F0B7B4C1C6194130086F47B /* wrap-it-up-music.m4a */; };
 		044596251C651A6000C84172 /* thats-what-she-said.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3F0B7B4B1C6194130086F47B /* thats-what-she-said.m4a */; };
 		044596261C651A6300C84172 /* that-was-easy.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3F0B7B4A1C6194130086F47B /* that-was-easy.m4a */; };
@@ -75,9 +65,7 @@
 		048AF2551F140C9B00FC3999 /* cash-me-outside.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 048AF2541F140C9B00FC3999 /* cash-me-outside.m4a */; };
 		048AF2571F140D4000FC3999 /* cash-me-outside.png in Resources */ = {isa = PBXBuildFile; fileRef = 048AF2561F140D4000FC3999 /* cash-me-outside.png */; };
 		04932AE51F266D0900021CA1 /* who-is-it.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 04932AE41F266D0800021CA1 /* who-is-it.m4a */; };
-		04932AE71F266DE100021CA1 /* who-is-it.png in Resources */ = {isa = PBXBuildFile; fileRef = 04932AE61F266DE100021CA1 /* who-is-it.png */; };
 		04932AEB1F266E5E00021CA1 /* john-cena.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 04932AEA1F266E5E00021CA1 /* john-cena.m4a */; };
-		04932AED1F266E9C00021CA1 /* john-cena.png in Resources */ = {isa = PBXBuildFile; fileRef = 04932AEC1F266E9C00021CA1 /* john-cena.png */; };
 		04AC88771C7568600025E35E /* okay-shiba-san.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 04AC88761C7568600025E35E /* okay-shiba-san.m4a */; };
 		04AC88791C7568730025E35E /* okay-shiba-san.png in Resources */ = {isa = PBXBuildFile; fileRef = 04AC88781C7568730025E35E /* okay-shiba-san.png */; };
 		04AC887F1C75FDD80025E35E /* rick-james-security.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 04AC887A1C75FDD80025E35E /* rick-james-security.m4a */; };
@@ -107,16 +95,6 @@
 		04227AD41C5D7C3300D075C2 /* stringConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stringConstants.h; sourceTree = "<group>"; };
 		042615C31C69AEF300E351EC /* instarapairhorn.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = instarapairhorn.m4a; sourceTree = "<group>"; };
 		043EF51F1C615B8300733477 /* DefaultSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultSettings.plist; sourceTree = "<group>"; };
-		0440E1191F14118700C7CC2D /* the-shooting.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "the-shooting.m4a"; path = "../../../../Downloads/the-shooting.m4a"; sourceTree = "<group>"; };
-		0440E11B1F14119100C7CC2D /* the-shooting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "the-shooting.png"; path = "../../../../Downloads/the-shooting.png"; sourceTree = "<group>"; };
-		0440E11D1F14142900C7CC2D /* ya-huey.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ya-huey.m4a"; path = "../../../../Downloads/ya-huey.m4a"; sourceTree = "<group>"; };
-		0440E1201F1414EC00C7CC2D /* pinche-pendejo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pinche-pendejo.png"; path = "../../../../Downloads/pinche-pendejo.png"; sourceTree = "<group>"; };
-		0440E1211F1414EC00C7CC2D /* ya-huey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ya-huey.png"; path = "../../../../Downloads/ya-huey.png"; sourceTree = "<group>"; };
-		0440E1241F14165F00C7CC2D /* huey-scream.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "huey-scream.m4a"; path = "../../../../Downloads/huey-scream.m4a"; sourceTree = "<group>"; };
-		0440E1261F1416BB00C7CC2D /* wilhelm-scream.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "wilhelm-scream.m4a"; path = "../../../../Downloads/wilhelm-scream.m4a"; sourceTree = "<group>"; };
-		0440E1281F1416D600C7CC2D /* wilhelm-scream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wilhelm-scream.png"; path = "../../../../Downloads/wilhelm-scream.png"; sourceTree = "<group>"; };
-		0440E12A1F1417AD00C7CC2D /* pinche-pendejo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "pinche-pendejo.m4a"; path = "../../../../Downloads/pinche-pendejo.m4a"; sourceTree = "<group>"; };
-		0440E12C1F14183000C7CC2D /* huey-scream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "huey-scream.png"; path = "../../../../Downloads/huey-scream.png"; sourceTree = "<group>"; };
 		044596321C65286800C84172 /* archer-fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "archer-fail.png"; sourceTree = "<group>"; };
 		044596331C65286800C84172 /* bon-qui-girl-i-cut-him.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bon-qui-girl-i-cut-him.png"; sourceTree = "<group>"; };
 		044596341C65286800C84172 /* bon-qui-rude.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bon-qui-rude.png"; sourceTree = "<group>"; };
@@ -156,9 +134,20 @@
 		048AF2541F140C9B00FC3999 /* cash-me-outside.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cash-me-outside.m4a"; sourceTree = "<group>"; };
 		048AF2561F140D4000FC3999 /* cash-me-outside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cash-me-outside.png"; sourceTree = "<group>"; };
 		04932AE41F266D0800021CA1 /* who-is-it.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "who-is-it.m4a"; path = "../../../../../../Volumes/Spare/Music/iTunes/iTunes Media/Music/Unknown Artist/Unknown Album/who-is-it.m4a"; sourceTree = "<group>"; };
-		04932AE61F266DE100021CA1 /* who-is-it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "who-is-it.png"; path = "../../../../Downloads/who-is-it.png"; sourceTree = "<group>"; };
 		04932AEA1F266E5E00021CA1 /* john-cena.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "john-cena.m4a"; path = "../../../../Music/john-cena.m4a"; sourceTree = "<group>"; };
-		04932AEC1F266E9C00021CA1 /* john-cena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "john-cena.png"; path = "../../../../Downloads/john-cena.png"; sourceTree = "<group>"; };
+		04932AEE1F26957A00021CA1 /* linda-listen.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "linda-listen.m4a"; sourceTree = "<group>"; };
+		04932AEF1F26957A00021CA1 /* wilhelm-scream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wilhelm-scream.png"; sourceTree = "<group>"; };
+		04932AF01F26958800021CA1 /* the-shooting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-shooting.png"; sourceTree = "<group>"; };
+		04932AF11F2695B900021CA1 /* huey-scream.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "huey-scream.png"; sourceTree = "<group>"; };
+		04932AF21F2695B900021CA1 /* john-cena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "john-cena.png"; sourceTree = "<group>"; };
+		04932AF31F2695B900021CA1 /* ya-huey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ya-huey.png"; sourceTree = "<group>"; };
+		04932AF41F2695B900021CA1 /* who-is-it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "who-is-it.png"; sourceTree = "<group>"; };
+		04932AF51F2695B900021CA1 /* pinche-pendejo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pinche-pendejo.png"; sourceTree = "<group>"; };
+		04932AF61F26960700021CA1 /* pinche-pendejo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pinche-pendejo.m4a"; sourceTree = "<group>"; };
+		04932AF71F26960700021CA1 /* huey-scream.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "huey-scream.m4a"; sourceTree = "<group>"; };
+		04932AF81F26960700021CA1 /* wilhelm-scream.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wilhelm-scream.m4a"; sourceTree = "<group>"; };
+		04932AF91F26960700021CA1 /* ya-huey.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ya-huey.m4a"; sourceTree = "<group>"; };
+		04932AFA1F26960700021CA1 /* the-shooting.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "the-shooting.m4a"; sourceTree = "<group>"; };
 		04AC88761C7568600025E35E /* okay-shiba-san.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "okay-shiba-san.m4a"; sourceTree = "<group>"; };
 		04AC88781C7568730025E35E /* okay-shiba-san.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "okay-shiba-san.png"; sourceTree = "<group>"; };
 		04AC887A1C75FDD80025E35E /* rick-james-security.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rick-james-security.m4a"; sourceTree = "<group>"; };
@@ -208,8 +197,9 @@
 		043EF5211C61A15500733477 /* Sound bites */ = {
 			isa = PBXGroup;
 			children = (
-				0440E12A1F1417AD00C7CC2D /* pinche-pendejo.m4a */,
-				0440E11D1F14142900C7CC2D /* ya-huey.m4a */,
+				04932AF71F26960700021CA1 /* huey-scream.m4a */,
+				04932AFA1F26960700021CA1 /* the-shooting.m4a */,
+				04932AF81F26960700021CA1 /* wilhelm-scream.m4a */,
 				3F0B7B3F1C6194130086F47B /* archer-fail.m4a */,
 				3F0B7B401C6194130086F47B /* bon-qui-girl-i-cut-him.m4a */,
 				3F0B7B411C6194130086F47B /* bon-qui-rude.m4a */,
@@ -241,9 +231,8 @@
 				04AC887D1C75FDD80025E35E /* rick-james-unity.m4a */,
 				04AC887E1C75FDD80025E35E /* rick-james-cold-blooded.m4a */,
 				044694CF1C7CC31900743C67 /* crack-kid-yeah.m4a */,
-				0440E1191F14118700C7CC2D /* the-shooting.m4a */,
-				0440E1241F14165F00C7CC2D /* huey-scream.m4a */,
-				0440E1261F1416BB00C7CC2D /* wilhelm-scream.m4a */,
+				04932AF61F26960700021CA1 /* pinche-pendejo.m4a */,
+				04932AF91F26960700021CA1 /* ya-huey.m4a */,
 				04932AE41F266D0800021CA1 /* who-is-it.m4a */,
 			);
 			name = "Sound bites";
@@ -252,11 +241,12 @@
 		043EF5221C61A16100733477 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				0440E12C1F14183000C7CC2D /* huey-scream.png */,
-				0440E1281F1416D600C7CC2D /* wilhelm-scream.png */,
-				0440E1211F1414EC00C7CC2D /* ya-huey.png */,
-				0440E1201F1414EC00C7CC2D /* pinche-pendejo.png */,
-				0440E11B1F14119100C7CC2D /* the-shooting.png */,
+				04932AEF1F26957A00021CA1 /* wilhelm-scream.png */,
+				04932AF01F26958800021CA1 /* the-shooting.png */,
+				04932AEE1F26957A00021CA1 /* linda-listen.m4a */,
+				04932AF51F2695B900021CA1 /* pinche-pendejo.png */,
+				04932AF41F2695B900021CA1 /* who-is-it.png */,
+				04932AF21F2695B900021CA1 /* john-cena.png */,
 				044596321C65286800C84172 /* archer-fail.png */,
 				044596331C65286800C84172 /* bon-qui-girl-i-cut-him.png */,
 				044596341C65286800C84172 /* bon-qui-rude.png */,
@@ -269,7 +259,7 @@
 				044596391C65286800C84172 /* got-him.png */,
 				0445963A1C65286800C84172 /* gotcha-bitch.png */,
 				0445963B1C65286800C84172 /* hah-gay.png */,
-				04932AEC1F266E9C00021CA1 /* john-cena.png */,
+				04932AF11F2695B900021CA1 /* huey-scream.png */,
 				3FC7FABD1C7012C4003609E3 /* inception.png */,
 				040EA4E31C6A9680006169E3 /* instarapairhorn.png */,
 				0445963C1C65286800C84172 /* shazam.png */,
@@ -280,6 +270,7 @@
 				04B9964D1C5D9E1D003CFAAC /* menu-icon.png */,
 				04B9964E1C5D9E1D003CFAAC /* menu-icon@2x.png */,
 				04B9964F1C5D9E1D003CFAAC /* menu-icon@3x.png */,
+				04932AF31F2695B900021CA1 /* ya-huey.png */,
 				04227ACA1C5D534900D075C2 /* System-settings-icon.png */,
 				04227ACB1C5D534900D075C2 /* System-settings-icon@2x.png */,
 				04227ACC1C5D534900D075C2 /* System-settings-icon@3x.png */,
@@ -294,7 +285,6 @@
 				04AC88871C7600150025E35E /* rick-james-look-bitch.png */,
 				04AC88881C7600150025E35E /* rick-james-cold-blooded.png */,
 				044694D11C7CC32B00743C67 /* crack-kid-yeah.png */,
-				04932AE61F266DE100021CA1 /* who-is-it.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -409,7 +399,6 @@
 				040EA4E41C6A9680006169E3 /* instarapairhorn.png in Resources */,
 				0445964D1C65287C00C84172 /* bruh-sound-effect.png in Resources */,
 				044596461C65286800C84172 /* got-him.png in Resources */,
-				0440E1291F1416D600C7CC2D /* wilhelm-scream.png in Resources */,
 				0445962B1C651A7000C84172 /* dave-chappelle-hummina.m4a in Resources */,
 				0445962A1C651A6D00C84172 /* deez-nuts.m4a in Resources */,
 				04B996521C5D9E1D003CFAAC /* menu-icon@3x.png in Resources */,
@@ -417,10 +406,8 @@
 				04AC88821C75FDD80025E35E /* rick-james-unity.m4a in Resources */,
 				046388611C6D973800B57CC2 /* linda-listen.m4a in Resources */,
 				3FC7FABC1C7012A2003609E3 /* inception.m4a in Resources */,
-				0440E11C1F14119200C7CC2D /* the-shooting.png in Resources */,
 				0445962C1C651A7200C84172 /* bye-felicia.m4a in Resources */,
 				0445962D1C651A7500C84172 /* bon-qui-rude.m4a in Resources */,
-				0440E11A1F14118700C7CC2D /* the-shooting.m4a in Resources */,
 				044596251C651A6000C84172 /* thats-what-she-said.m4a in Resources */,
 				044694D01C7CC31F00743C67 /* crack-kid-yeah.m4a in Resources */,
 				044596481C65286800C84172 /* hah-gay.png in Resources */,
@@ -431,7 +418,6 @@
 				04AC888B1C7600150025E35E /* rick-james-unity.png in Resources */,
 				04AC88811C75FDD80025E35E /* rick-james-celebration.m4a in Resources */,
 				044694D21C7CC32B00743C67 /* crack-kid-yeah.png in Resources */,
-				04932AED1F266E9C00021CA1 /* john-cena.png in Resources */,
 				04AC88801C75FDD80025E35E /* rick-james-look-bitch.m4a in Resources */,
 				04AC88831C75FDD80025E35E /* rick-james-cold-blooded.m4a in Resources */,
 				04AC888D1C7600150025E35E /* rick-james-cold-blooded.png in Resources */,
@@ -450,7 +436,6 @@
 				04AC887F1C75FDD80025E35E /* rick-james-security.m4a in Resources */,
 				044596291C651A6B00C84172 /* got-him.m4a in Resources */,
 				044596471C65286800C84172 /* gotcha-bitch.png in Resources */,
-				0440E1231F1414EC00C7CC2D /* ya-huey.png in Resources */,
 				046388601C6D973800B57CC2 /* jesus-christ-kid.m4a in Resources */,
 				0463886E1C6D9D0000B57CC2 /* okay-vine.m4a in Resources */,
 				0445964A1C65286800C84172 /* that-was-easy.png in Resources */,
@@ -458,9 +443,7 @@
 				04B996501C5D9E1D003CFAAC /* menu-icon.png in Resources */,
 				044596421C65286800C84172 /* bon-qui-security.png in Resources */,
 				044596271C651A6500C84172 /* hah-gay.m4a in Resources */,
-				0440E12D1F14183000C7CC2D /* huey-scream.png in Resources */,
 				046388661C6D974800B57CC2 /* jesus-christ-kid.png in Resources */,
-				04932AE71F266DE100021CA1 /* who-is-it.png in Resources */,
 				04AC888A1C7600150025E35E /* rick-james-celebration.png in Resources */,
 				0463886A1C6D9B3B00B57CC2 /* okay-kanye-song.png in Resources */,
 				0445962E1C651A7800C84172 /* bon-qui-security.m4a in Resources */,
@@ -468,20 +451,15 @@
 				04AC88891C7600150025E35E /* rick-james-security.png in Resources */,
 				047286481C57F28300F08547 /* Assets.xcassets in Resources */,
 				042615C41C69AEF300E351EC /* instarapairhorn.m4a in Resources */,
-				0440E12B1F1417AE00C7CC2D /* pinche-pendejo.m4a in Resources */,
 				04932AE51F266D0900021CA1 /* who-is-it.m4a in Resources */,
 				046388621C6D973800B57CC2 /* okay-then-what.m4a in Resources */,
 				04AC88771C7568600025E35E /* okay-shiba-san.m4a in Resources */,
-				0440E11E1F14142900C7CC2D /* ya-huey.m4a in Resources */,
 				3FC7FABE1C7012C4003609E3 /* inception.png in Resources */,
 				04227ACD1C5D534900D075C2 /* System-settings-icon.png in Resources */,
-				0440E1221F1414EC00C7CC2D /* pinche-pendejo.png in Resources */,
-				0440E1271F1416BC00C7CC2D /* wilhelm-scream.m4a in Resources */,
 				047286461C57F28300F08547 /* Main.storyboard in Resources */,
 				046388671C6D974800B57CC2 /* okay-then-what.png in Resources */,
 				044596401C65286800C84172 /* bon-qui-girl-i-cut-him.png in Resources */,
 				044596261C651A6300C84172 /* that-was-easy.m4a in Resources */,
-				0440E1251F14166000C7CC2D /* huey-scream.m4a in Resources */,
 				04AC888C1C7600150025E35E /* rick-james-look-bitch.png in Resources */,
 				04AC88791C7568730025E35E /* okay-shiba-san.png in Resources */,
 				0445964B1C65286800C84172 /* thats-what-she-said.png in Resources */,
