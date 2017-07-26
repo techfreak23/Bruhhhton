@@ -22,7 +22,7 @@ class SettingsViewController: UITableViewController {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         self.tableView.backgroundColor = UIColor.init(red: 56/255, green: 3/255, blue: 98/255, alpha: 1.0)
         self.tableView.separatorStyle = .none
-        
+        self.tableView.isScrollEnabled = false
         self.title = "Settings"
     }
 
