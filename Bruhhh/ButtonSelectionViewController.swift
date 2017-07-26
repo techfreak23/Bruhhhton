@@ -205,8 +205,6 @@ class ButtonSelectionViewController: UITableViewController {
                 self.buttonShortcuts.insert(item1, at: destinationIndexPath.row)
                 print("Reordered button shortcuts: \(buttonShortcuts)")
                 
-            } else if destinationIndexPath.section == 1 {
-                
             }
         }
     }
@@ -217,6 +215,10 @@ class ButtonSelectionViewController: UITableViewController {
         } else {
             return proposedDestinationIndexPath
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        print("Edit button for style \(editingStyle) pressed at index \(indexPath)")
     }
     
     @objc func cancelSelection() {
