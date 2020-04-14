@@ -48,7 +48,7 @@ class ButtonSelectionViewController: UITableViewController {
         self.navigationController?.navigationBar.backgroundColor = UIColor.init(red: 56/255, green: 3/255, blue: 98/255, alpha: 1.0)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        let titleDict = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
+        let titleDict:[NSAttributedStringKey: Any]? = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
@@ -127,15 +127,21 @@ class ButtonSelectionViewController: UITableViewController {
         let lastUsedTitle = lastUsed!.object(forKey: "titleKey") as! String
         var button: AnyObject?
         
-        if indexPath.section == 0 {
-            button = buttonShortcuts.object(at: indexPath.row) as AnyObject
-        } else {
+        if source == "shortcutSelection" {
+            if indexPath.section == 0 {
+                button = buttonShortcuts.object(at: indexPath.row) as AnyObject
+            } else {
+                button = buttonOptions.object(at: indexPath.row) as AnyObject
+            }
+        } else  {
             button = buttonOptions.object(at: indexPath.row) as AnyObject
         }
         
+        
+        
         let titleText = (button as AnyObject).object(forKey: "titleKey") as! String
         
-        print("Var: \(defaultTitle), \(lastUsedTitle), \(button), \(titleText)")
+        print("Var: \(defaultTitle), \(lastUsedTitle), \(String(describing: button)), \(titleText)")
         
         
         if source == "fromHome" {
@@ -235,49 +241,50 @@ class ButtonSelectionViewController: UITableViewController {
     
     func saveToUserDefaults() {
         UserDefaults.standard.setValue(self.buttonShortcuts, forKey: "ShortcutButtons")
-        print("Shortcut Buttons from User Defaults: \(UserDefaults.standard.value(forKey: "ShortcutButtons"))")
+        print("Shortcut Buttons from User Defaults: \(String(describing: UserDefaults.standard.value(forKey: "ShortcutButtons")))")
     }
     
     func createButtonOptions() {
-        let instaRap: [String: Any?] = [titleKey: "Airhorn", descriptionKey: "instarapairhorn", favoriteKey: 0]
+        //let instaRap: [String: Any?] = [titleKey: "Airhorn", descriptionKey: "instarapairhorn", favoriteKey: 0]
         let archerFail: [String: Any?] = [titleKey: "Archer Fail", descriptionKey: "archer-fail", favoriteKey: 0]
         let cutHim: [String: Any?] = [titleKey: "Girl, I Cut Him", descriptionKey: "bon-qui-girl-i-cut-him", favoriteKey: 0]
         let rude: [String: Any?] = [titleKey: "Rude", descriptionKey: "bon-qui-rude", favoriteKey: 0]
         let security: [String: Any?] = [titleKey: "Security", descriptionKey: "bon-qui-security", favoriteKey: 0]
         let bruh: [String: Any?] = [titleKey: "Bruh", descriptionKey: "bruh-sound-effect", favoriteKey: 0]
         let byeFelicia: [String: Any?] = [titleKey: "Bye Felicia", descriptionKey: "bye-felicia", favoriteKey: 0]
-        let cashMeOutside: [String: Any?] = [titleKey: "Cash Me Outside", descriptionKey: "cash-me-outside", favoriteKey: 0]
+        //let cashMeOutside: [String: Any?] = [titleKey: "Cash Me Outside", descriptionKey: "cash-me-outside", favoriteKey: 0]
         let hummina: [String: Any?] = [titleKey: "Hummina", descriptionKey: "dave-chappelle-hummina", favoriteKey: 0]
         let deezNuts: [String: Any?] = [titleKey: "Deez Nuts", descriptionKey: "deez-nuts", favoriteKey: 0]
         let gotHim: [String: Any?] = [titleKey: "Got Em", descriptionKey: "got-him", favoriteKey: 0]
         let gotchaBitch: [String: Any?] = [titleKey: "Gotcha Bitch", descriptionKey: "gotcha-bitch", favoriteKey: 0]
         let hahGay: [String: Any?] = [titleKey: "Ha Gay", descriptionKey: "hah-gay", favoriteKey: 0]
-        let inception: [String: Any?] = [titleKey: "Inception", descriptionKey: "inception", favoriteKey: 0]
-        let lindaListen: [String: Any?] = [titleKey: "Linda Listen!", descriptionKey: "linda-listen", favoriteKey: 0]
-        let okayThenWhat: [String: Any?] = [titleKey: "Okay Then What?", descriptionKey: "okay-then-what", favoriteKey: 0]
-        let okayKanye: [String: Any?] = [titleKey: "Okay (Mercy)", descriptionKey: "okay-kanye-song", favoriteKey: 0]
-        let okayVine: [String: Any?] = [titleKey: "Okay (Vine)", descriptionKey: "okay-vine", favoriteKey: 0]
-        let okayShiba: [String: Any?] = [titleKey: "Okay (Shiba San)", descriptionKey: "okay-shiba-san", favoriteKey: 0]
-        let johnCena: [String: Any?] = [titleKey: "John Cena", descriptionKey: "john-cena"]
-        let jesusChrist: [String: Any?] = [titleKey: "Jesus Christ", descriptionKey: "jesus-christ-kid", favoriteKey: 0]
+        //let inception: [String: Any?] = [titleKey: "Inception", descriptionKey: "inception", favoriteKey: 0]
+        //let lindaListen: [String: Any?] = [titleKey: "Linda Listen!", descriptionKey: "linda-listen", favoriteKey: 0]
+        //let okayThenWhat: [String: Any?] = [titleKey: "Okay Then What?", descriptionKey: "okay-then-what", favoriteKey: 0]
+        //let okayKanye: [String: Any?] = [titleKey: "Okay (Mercy)", descriptionKey: "okay-kanye-song", favoriteKey: 0]
+        //let okayVine: [String: Any?] = [titleKey: "Okay (Vine)", descriptionKey: "okay-vine", favoriteKey: 0]
+        //let okayShiba: [String: Any?] = [titleKey: "Okay (Shiba San)", descriptionKey: "okay-shiba-san", favoriteKey: 0]
+        //let johnCena: [String: Any?] = [titleKey: "John Cena", descriptionKey: "john-cena"]
+        //let jesusChrist: [String: Any?] = [titleKey: "Jesus Christ", descriptionKey: "jesus-christ-kid", favoriteKey: 0]
         let shazam: [String: Any?] = [titleKey: "Shazam", descriptionKey: "shazam", favoriteKey: 0]
         let thatsEasy: [String: Any?] = [titleKey: "That Was Easy", descriptionKey: "that-was-easy", favoriteKey: 0]
         let sheSaid: [String: Any?] = [titleKey: "That's What She Said", descriptionKey: "thats-what-she-said"]
-        let theShooting: [String: Any?] = [titleKey: "The Shooting", descriptionKey: "the-shooting"]
+        //let theShooting: [String: Any?] = [titleKey: "The Shooting", descriptionKey: "the-shooting"]
         let wrapItUp: [String: Any?] = [titleKey: "Wrap It Up", descriptionKey: "wrap-it-up-music"]
-        let rickSecurity: [String: Any?] = [titleKey: "Security (Rick James)", descriptionKey: "rick-james-security"]
-        let rickCelebration: [String: Any?] = [titleKey: "It's a Celebration", descriptionKey: "rick-james-celebration"]
-        let rickBitch: [String: Any?] = [titleKey: "Rick James, Bitch", descriptionKey: "rick-james-look-bitch"]
-        let rickUnity: [String: Any?] = [titleKey: "Unity", descriptionKey: "rick-james-unity"]
-        let rickCold: [String: Any?] = [titleKey: "Cold Blooded", descriptionKey: "rick-james-cold-blooded"]
-        let crackKidYeah: [String: Any?] = [titleKey: "Crack Kid Yeah", descriptionKey: "crack-kid-yeah"]
-        let yaHuey: [String: Any?] = [titleKey: "Ya Huey", descriptionKey: "ya-huey"]
-        let pinchePendejo: [String: Any?] = [titleKey: "Pinche Pendejo", descriptionKey: "pinche-pendejo"]
-        let hueyScream: [String: Any?] = [titleKey: "Huey Scream", descriptionKey: "huey-scream"]
-        let whoIsIt: [String: Any?] = [titleKey: "Who Is It", descriptionKey: "who-is-it"]
-        let wilhelmScream: [String: Any?]  = [titleKey: "Wilhelm Scream", descriptionKey: "wilhelm-scream"]
+        //let rickSecurity: [String: Any?] = [titleKey: "Security (Rick James)", descriptionKey: "rick-james-security"]
+        //let rickCelebration: [String: Any?] = [titleKey: "It's a Celebration", descriptionKey: "rick-james-celebration"]
+        //let rickBitch: [String: Any?] = [titleKey: "Rick James, Bitch", descriptionKey: "rick-james-look-bitch"]
+        //let rickUnity: [String: Any?] = [titleKey: "Unity", descriptionKey: "rick-james-unity"]
+        //let rickCold: [String: Any?] = [titleKey: "Cold Blooded", descriptionKey: "rick-james-cold-blooded"]
+        //let crackKidYeah: [String: Any?] = [titleKey: "Crack Kid Yeah", descriptionKey: "crack-kid-yeah"]
+        //let yaHuey: [String: Any?] = [titleKey: "Ya Huey", descriptionKey: "ya-huey"]
+        //let pinchePendejo: [String: Any?] = [titleKey: "Pinche Pendejo", descriptionKey: "pinche-pendejo"]
+        //let hueyScream: [String: Any?] = [titleKey: "Huey Scream", descriptionKey: "huey-scream"]
+        //let whoIsIt: [String: Any?] = [titleKey: "Who Is It", descriptionKey: "who-is-it"]
+        //let wilhelmScream: [String: Any?]  = [titleKey: "Wilhelm Scream", descriptionKey: "wilhelm-scream"]
         
-        buttonOptions.addObjects(from: [archerFail, cutHim, rude, security, bruh, byeFelicia, cashMeOutside, hummina, deezNuts, gotHim, gotchaBitch, hahGay, inception, lindaListen, okayThenWhat, okayKanye, okayVine, okayShiba, rickSecurity, rickCelebration, rickBitch, rickUnity, rickCold, johnCena, jesusChrist, instaRap, shazam, thatsEasy, sheSaid, theShooting, wrapItUp, crackKidYeah, yaHuey, pinchePendejo, hueyScream, whoIsIt, wilhelmScream])
+        //buttonOptions.addObjects(from: [archerFail, cutHim, rude, security, bruh, byeFelicia, cashMeOutside, hummina, deezNuts, gotHim, gotchaBitch, hahGay, inception, lindaListen, okayThenWhat, okayKanye, okayVine, okayShiba, rickSecurity, rickCelebration, rickBitch, rickUnity, rickCold, johnCena, jesusChrist, instaRap, shazam, thatsEasy, sheSaid, theShooting, wrapItUp, crackKidYeah, yaHuey, pinchePendejo, hueyScream, whoIsIt, wilhelmScream])
+        buttonOptions.addObjects(from: [archerFail, cutHim, rude, security, bruh, byeFelicia, hummina, deezNuts, gotHim, gotchaBitch, hahGay, shazam, thatsEasy, sheSaid, wrapItUp])
         
         for item in buttonOptions as! [NSDictionary] {
             for itemB in buttonShortcuts as! [NSDictionary] {

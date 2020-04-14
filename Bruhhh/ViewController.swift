@@ -33,9 +33,9 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        let titleDict = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
+        let titleDict:[NSAttributedStringKey : Any]? = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.white]
         //let foregroundColor: NSAttributedStringKey
-        print("Dict: \(titleDict)")
+        //print("Dict: \(titleDict)")
         self.navigationController?.navigationBar.titleTextAttributes = titleDict
         
         let buttonImage = UIImage(named: "System-settings-icon")
