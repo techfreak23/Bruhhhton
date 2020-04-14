@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        let titleDict:[NSAttributedStringKey : Any]? = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.white]
+        let titleDict:[NSAttributedString.Key : Any]? = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white]
         //let foregroundColor: NSAttributedStringKey
         //print("Dict: \(titleDict)")
         self.navigationController?.navigationBar.titleTextAttributes = titleDict
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         
         print(resourceName)
         
-        bruhButton.setImage(UIImage(named: resourceName), for: UIControlState())
+        bruhButton.setImage(UIImage(named: resourceName), for: UIControl.State())
         
         if let path = Bundle.main.path(forResource: resourceName, ofType: ".m4a") {
             let url = URL(fileURLWithPath: path)

@@ -48,7 +48,7 @@ class ButtonSelectionViewController: UITableViewController {
         self.navigationController?.navigationBar.backgroundColor = UIColor.init(red: 56/255, green: 3/255, blue: 98/255, alpha: 1.0)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        let titleDict:[NSAttributedStringKey: Any]? = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.white]
+        let titleDict:[NSAttributedString.Key: Any]? = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = titleDict
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
@@ -92,7 +92,7 @@ class ButtonSelectionViewController: UITableViewController {
         
     }
     
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         
         if indexPath.section == 0 {
             return .delete
@@ -223,7 +223,7 @@ class ButtonSelectionViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         print("Edit button for style \(editingStyle) pressed at index \(indexPath)")
     }
     
